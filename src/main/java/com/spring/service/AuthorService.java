@@ -19,6 +19,10 @@ public class AuthorService {
         return authorRepo.findById(id).orElseThrow(() -> new NoSuchElementException("Author Not Found With ID: "+ id));
     }
 
+    public Author getById(Long id) {
+        return authorRepo.getById(id);
+    }
+
     public List<Author> findAll() {
         return authorRepo.findAll();
     }
@@ -28,6 +32,10 @@ public class AuthorService {
             throw new RuntimeException();
         }
         return authorRepo.save(author);
+    }
+
+    public List<Author> saveAll(List<Author> authors) {
+        return authorRepo.saveAll(authors);
     }
 
     public Author update(Author entity) {
