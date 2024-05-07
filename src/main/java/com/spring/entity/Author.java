@@ -2,12 +2,17 @@ package com.spring.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.spring.entity.base.BaseEntity;
+import com.spring.validator.IpAddress;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Formula;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.validation.constraints.Email;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,16 +21,19 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "authors")
-public class Author {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Author extends BaseEntity<Long> {
 
-    private String name;
+//    @Pattern(regexp = "^([0-9]{1,3})\\.([0-9]{1,3})\\.([0-9]{1,3})\\.([0-9]{1,3})$")
+    @IpAddress(message = "Should Be Enter Valid Ip Address")
+    private String ipAddress;
+
+    @Email
+    private String email;
 
     @Formula("(select COUNT(*) from books book where book.author_id = id)")
     private long bookCount;
+
     @OneToMany(mappedBy = "author")
     @JsonManagedReference
     private List<Book> books = new ArrayList<>();

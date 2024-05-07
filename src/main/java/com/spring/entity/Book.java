@@ -2,12 +2,15 @@ package com.spring.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.spring.entity.base.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Formula;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
 
 @NamedEntityGraph(name = "loadAuthor", attributeNodes = @NamedAttributeNode("author"))
@@ -17,14 +20,10 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "books")
-public class Book {
+public class Book extends BaseEntity<Long> {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String name;
-
+    @Min(value = 5)
+    @Max(value = 500)
     private double price;
 
      @Formula("(select count(*) from books)")
@@ -33,6 +32,9 @@ public class Book {
     @Transient
     private double discount;
 
+
+
+//    @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "author_id")
     @JsonBackReference
