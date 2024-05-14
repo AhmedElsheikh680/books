@@ -10,8 +10,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 
 @Validated
 @RestController
@@ -22,8 +20,14 @@ public class AuthorController {
     @Autowired
     private AuthorService authorService;
 
+//    @GetMapping("/{id}")
+//    public ResponseEntity<?> findById(@PathVariable @Min(value = 5) @Max(value = 500) Long id) {
+//
+//        return ResponseEntity.ok(authorService.findById(id));
+//    }
+
     @GetMapping("/{id}")
-    public ResponseEntity<?> findById(@PathVariable @Min(value = 5) @Max(value = 500) Long id) {
+    public ResponseEntity<?> findById(@PathVariable Long id) {
 
         return ResponseEntity.ok(authorService.findById(id));
     }

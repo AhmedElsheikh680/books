@@ -1,4 +1,4 @@
-package com.spring.exception;
+package com.spring.exception.error;
 
 import org.springframework.boot.web.error.ErrorAttributeOptions;
 import org.springframework.boot.web.servlet.error.DefaultErrorAttributes;
