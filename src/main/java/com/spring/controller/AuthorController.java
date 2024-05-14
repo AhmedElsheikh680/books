@@ -38,6 +38,7 @@ public class AuthorController {
         return ResponseEntity.ok(authorService.save(entity));
     }
 
+
     @PutMapping("")
     public ResponseEntity<?> update(@RequestBody @Valid Author entity) {
         return ResponseEntity.ok(authorService.save(entity));
@@ -49,7 +50,7 @@ public class AuthorController {
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping("/spec")
+    @PostMapping    ("/spec")
     public ResponseEntity<?> findByAuthorSpec(@RequestBody AuthorSearch authorSearch) {
         return ResponseEntity.ok(authorService.findByAuthorSpec(authorSearch));
     }
