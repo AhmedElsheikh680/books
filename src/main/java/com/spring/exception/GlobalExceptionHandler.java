@@ -21,8 +21,8 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(RecordNotFoundException.class)
     public ResponseEntity<?> handleRecordNotFound(RecordNotFoundException ex){
-
-        ErrorResponse errorResponse = new ErrorResponse(ex.getLocalizedMessage(), Arrays.asList(ex.getMessage()));
+        int code =ex.getCode() !=0 ? ex.getCode() : HttpStatus.NOT_FOUND.value();
+        ErrorResponse errorResponse = new ErrorResponse(ex.getLocalizedMessage(), code,Arrays.asList(ex.getMessage()));
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)
                 .body(errorResponse);
@@ -31,7 +31,8 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(DuplicateRecordException.class)
     public ResponseEntity<?> handleDuplicatedRecordException(DuplicateRecordException ex) {
-        ErrorResponse errorResponse = new ErrorResponse(ex.getLocalizedMessage(), Arrays.asList(ex.getMessage()));
+        int code = ex.getCode() !=0 ? ex.getCode() : HttpStatus.CONTINUE.value();
+        ErrorResponse errorResponse = new ErrorResponse(ex.getLocalizedMessage(), code, Arrays.asList(ex.getMessage()));
 
         return ResponseEntity
                 .status(HttpStatus.CONFLICT)

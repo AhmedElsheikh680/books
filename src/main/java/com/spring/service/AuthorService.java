@@ -25,7 +25,8 @@ public class AuthorService extends BaseService<Author, Long> {
         if (!author.getEmail().isEmpty() && author.getEmail() !=null) {
            Optional<Author> entity =  findByEmail(author.getEmail());
            if (entity.isPresent()) {
-               throw new DuplicateRecordException("This Email already exist");
+//               throw new DuplicateRecordException("This Email already exist");
+               throw new DuplicateRecordException();
            }
         }
         return super.save(author);

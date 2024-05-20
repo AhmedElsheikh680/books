@@ -25,10 +25,12 @@ import java.util.List;
 public class Author extends BaseEntity<Long> {
 
 //    @Pattern(regexp = "^([0-9]{1,3})\\.([0-9]{1,3})\\.([0-9]{1,3})\\.([0-9]{1,3})$")
-    @IpAddress(message = "Should Be Enter Valid Ip Address")
+//    @IpAddress("message = "Should Be Enter Valid Ip Address")
+    @IpAddress(message = "{validation.constraints.ip-address.message}")
     private String ipAddress;
 
-    @Email
+//    @Email
+    @Email(message = "{enter.valid.email}")
     private String email;
 
     @Formula("(select COUNT(*) from books book where book.author_id = id)")

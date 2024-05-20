@@ -1,6 +1,7 @@
 package com.spring.entity.base;
 
 
+import com.spring.config.Translator;
 import com.spring.exception.RecordNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -21,7 +22,9 @@ public class BaseService <T extends BaseEntity<ID>, ID extends Number>{
         if (entity.isPresent()){
             return entity.get();
         } else {
-            throw new RecordNotFoundException("This Record With ID-> "+ id + " Not Found");
+//            throw new RecordNotFoundException("This Record With ID-> "+ id + " Not Found");
+//            throw new RecordNotFoundException();
+            throw new RecordNotFoundException(Translator.toLocale("RECORD_NOT_FOUND",id ));
         }
     }
 
