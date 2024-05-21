@@ -14,7 +14,10 @@ public class PriceSchedule {
 
     Logger log = LoggerFactory.getLogger(PriceSchedule.class);
 
-    @Scheduled(fixedRate = 2000)
+//    @Scheduled(initialDelay = 2000, fixedRate = 2000)
+//    @Scheduled(initialDelay = 2000, fixedRateString = "PT02S")
+//    @Scheduled(initialDelay = 2000, fixedRateString = "${price.interval}")
+    @Scheduled(cron = "${interval-in-cron}")
     @Async
     public void computePrice() throws InterruptedException {
         Thread.sleep(9000);
