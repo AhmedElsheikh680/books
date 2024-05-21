@@ -7,6 +7,9 @@ import com.spring.entity.base.BaseService;
 import com.spring.exception.DuplicateRecordException;
 import com.spring.repo.AuthorRepo;
 import com.spring.repo.AuthorSpec;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +19,9 @@ import java.util.Optional;
 @Service
 public class AuthorService extends BaseService<Author, Long> {
 
+    Logger logger  = LoggerFactory.getLogger(AuthorService.class);
+//private static final Logger logger = LogManager.getLogger(AuthorService.class);
+
     @Autowired
     private AuthorRepo authorRepo;
 
@@ -24,8 +30,11 @@ public class AuthorService extends BaseService<Author, Long> {
 
         if (!author.getEmail().isEmpty() && author.getEmail() !=null) {
            Optional<Author> entity =  findByEmail(author.getEmail());
+           logger.info("Author Name is {} and email is " + author.getName(), author.getEmail());
+            System.out.println("Email: "+ author.getEmail());
            if (entity.isPresent()) {
 //               throw new DuplicateRecordException("This Email already exist");
+               logger.error("This Email already exist!!!!!!!!!!");
                throw new DuplicateRecordException();
            }
         }
