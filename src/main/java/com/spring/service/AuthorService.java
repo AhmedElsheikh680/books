@@ -60,7 +60,7 @@ public class AuthorService extends BaseService<Author, Long> {
 //        return authorRepo.findByEmail(email);
 //    }
 
-    @Async
+    @Async(value = "threadPoolTaskExecutor")
     public CompletableFuture<Author> findByEmail(String email) {
         return CompletableFuture.completedFuture(authorRepo.findByEmail(email).get());
     }
