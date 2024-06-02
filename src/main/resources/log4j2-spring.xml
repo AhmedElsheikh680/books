@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+	<Properties>
+<!--		<property name="applicationName">${spring:spring.application.name}</property>-->
+<!--		<Property name="applicationName">${sys:spring.application.name}</Property>-->
+		<Property name="applicationName">books</Property>
+		<Property name="basePath">logs</Property>
+	</Properties>
+	<Appenders>
+		<RollingFile name="fileLogger"
+					 fileName="${basePath}/${applicationName}.log"
+					 filePattern="${basePath}/${applicationName}-%d{yyyy-MM-dd}.log">
+			<PatternLayout>
+				<charset>UTF-8</charset>
+<!--				<pattern>%d{yyyy-MM-dd}-%t-%x-%-5p-%-10c:%m%n</pattern>-->
+				<pattern>%d{yyyy-MM-dd HH:mm:ss} %msg%n</pattern>
+			</PatternLayout>
+
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+				<SizeBasedTriggeringPolicy size="25MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10">
+				<Delete basePath="${basePath}" maxDepth="10">
+					<!-- Delete all files older than 30 days -->
+					<IfLastModified age="30d" />
+				</Delete>
+			</DefaultRolloverStrategy>
+		</RollingFile>
+		<Async name="AsyncLogger">
+			<AppenderRef ref="fileLogger" />
+		</Async>
+		<Console name="console" target="SYSTEM_OUT">
+			<!--			%d{DATE}-->
+			<!--			timezone="GMT+2"-->
+			<!--			%d{yyyy-MM-dd HH:mm:ss}{GMT+3} [%t] %c{1}-->
+			<!--            <PatternLayout  pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - [${applicationName}] - %msg%n" />-->
+			<PatternLayout  pattern="%d{yyyy-MM-dd HH:mm:ss} %msg%n"  />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.spring" level="ALL" additivity="true" />
+		<Root level="INFO" additivity="true">
+			<AppenderRef ref="console" />
+			<AppenderRef ref="fileLogger"/>
+		</Root>
+	</Loggers>
+</Configuration>

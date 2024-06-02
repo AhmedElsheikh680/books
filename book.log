@@ -1,0 +1,128 @@
+Starting SpringDataJpaHrProjectApplication using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 25624 (D:\intellij\books\target\classes started by Ahmed.Elsheikh in D:\intellij\books)
+No active profile set, falling back to 1 default profile: "default"
+Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
+Tomcat initialized with port(s): 1996 (http)
+Starting service [Tomcat]
+Starting Servlet engine: [Apache Tomcat/9.0.71]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1553 ms
+HHH000204: Processing PersistenceUnitInfo [name: default]
+HHH000412: Hibernate ORM core version 5.6.14.Final
+HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+HikariPool-1 - Starting...
+HikariPool-1 - Start completed.
+HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+LiveReload server is running on port 35729
+Exposing 1 endpoint(s) beneath base path '/actuator'
+Tomcat started on port(s): 1996 (http) with context path ''
+Started SpringDataJpaHrProjectApplication in 5.308 seconds (JVM running for 6.413)
+
+    select
+        author0_.id as id1_0_,
+        author0_.created_by as created_2_0_,
+        author0_.created_date as created_3_0_,
+        author0_.last_modified_by as last_mod4_0_,
+        author0_.last_modified_date as last_mod5_0_,
+        author0_.name as name6_0_,
+        author0_.status_code as status_c7_0_,
+        author0_.email as email8_0_,
+        author0_.ip_address as ip_addre9_0_,
+        (select
+            COUNT(*) 
+        from
+            books book 
+        where
+            book.author_id = author0_.id) as formula1_ 
+    from
+        authors author0_
+
+    select
+        book0_.id as id1_1_0_,
+        author1_.id as id1_0_1_,
+        book0_.created_by as created_2_1_0_,
+        book0_.created_date as created_3_1_0_,
+        book0_.last_modified_by as last_mod4_1_0_,
+        book0_.last_modified_date as last_mod5_1_0_,
+        book0_.name as name6_1_0_,
+        book0_.status_code as status_c7_1_0_,
+        book0_.author_id as author_i9_1_0_,
+        book0_.price as price8_1_0_,
+        (select
+            count(*) 
+        from
+            books) as formula2_0_,
+        author1_.created_by as created_2_0_1_,
+        author1_.created_date as created_3_0_1_,
+        author1_.last_modified_by as last_mod4_0_1_,
+        author1_.last_modified_date as last_mod5_0_1_,
+        author1_.name as name6_0_1_,
+        author1_.status_code as status_c7_0_1_,
+        author1_.email as email8_0_1_,
+        author1_.ip_address as ip_addre9_0_1_,
+        (select
+            COUNT(*) 
+        from
+            books book 
+        where
+            book.author_id = author1_.id) as formula1_1_ 
+    from
+        books book0_ 
+    left outer join
+        authors author1_ 
+            on book0_.author_id=author1_.id
+Initializing Spring DispatcherServlet 'dispatcherServlet'
+Initializing Servlet 'dispatcherServlet'
+Completed initialization in 2 ms
+
+    select
+        author0_.id as id1_0_0_,
+        author0_.created_by as created_2_0_0_,
+        author0_.created_date as created_3_0_0_,
+        author0_.last_modified_by as last_mod4_0_0_,
+        author0_.last_modified_date as last_mod5_0_0_,
+        author0_.name as name6_0_0_,
+        author0_.status_code as status_c7_0_0_,
+        author0_.email as email8_0_0_,
+        author0_.ip_address as ip_addre9_0_0_,
+        (select
+            COUNT(*) 
+        from
+            books book 
+        where
+            book.author_id = author0_.id) as formula1_0_ 
+    from
+        authors author0_ 
+    where
+        author0_.id=?
+Resolved [RecordNotFoundException(code=0)]
+
+    select
+        author0_.id as id1_0_0_,
+        author0_.created_by as created_2_0_0_,
+        author0_.created_date as created_3_0_0_,
+        author0_.last_modified_by as last_mod4_0_0_,
+        author0_.last_modified_date as last_mod5_0_0_,
+        author0_.name as name6_0_0_,
+        author0_.status_code as status_c7_0_0_,
+        author0_.email as email8_0_0_,
+        author0_.ip_address as ip_addre9_0_0_,
+        (select
+            COUNT(*) 
+        from
+            books book 
+        where
+            book.author_id = author0_.id) as formula1_0_ 
+    from
+        authors author0_ 
+    where
+        author0_.id=?
+Resolved [RecordNotFoundException(code=0)]
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HikariPool-1 - Shutdown initiated...
+HikariPool-1 - Shutdown completed.
