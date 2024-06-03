@@ -40,6 +40,8 @@ public class Author extends BaseEntity<Long> {
     @JsonManagedReference
     private List<Book> books = new ArrayList<>();
 
+    private String imagePath;
+
     // Helper method to add and remove instead of getter and Setter
     public void addBook(Book book) {
         books.add(book);
