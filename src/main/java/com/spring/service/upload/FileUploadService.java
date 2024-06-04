@@ -1,6 +1,9 @@
 package com.spring.service.upload;
 
 
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.model.*;
+import com.amazonaws.util.IOUtils;
 import com.spring.entity.Author;
 import com.spring.exception.FileStorageException;
 import com.spring.service.AuthorService;
@@ -17,6 +20,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -27,8 +31,23 @@ public class FileUploadService {
     private Path fileStorageLocation;
 
     @Value("${file.upload.base-path}")
-    private     String basePath;
-//    private final String basePath = "D:\\Global\\book\\";
+    private String basePath;
+    //    private final String basePath = "D:\\Global\\book\\";
+//	@Value("${google.storage.bucket-name}")
+    private String googleBucketName = "";
+
+    //	@Value("${google.storage.project-id}")
+    private String projectId = "";
+
+    //	@Value("${google.storage.credentials.path}")
+    private String credentialPath = "";
+
+//	endpointUrl: https://s3.us-east-2.amazonaws.com
+
+    //	@Value("${aws.s3.bucket}")
+    private String awsBucketName;
+
+    private final AmazonS3 amazonS3;
 
     Logger log = LoggerFactory.getLogger(FileUploadService.class);
 
@@ -67,14 +86,11 @@ public class FileUploadService {
     }
 
 
-
-
-
     public void updateImagePath(Long id, String pathType, String imagePath) {
         if (pathType.contains("authors")) {
-          Author author =  authorService.findById(id);
-          author.setImagePath(imagePath);
-          authorService.update(author);
+            Author author = authorService.findById(id);
+            author.setImagePath(imagePath);
+            authorService.update(author);
         }
     }
 
@@ -87,4 +103,62 @@ public class FileUploadService {
         }
         return file;
     }
+
+
+    /* Start AWS */
+    public String cloudUploadFile(MultipartFile file, Long id, String pathType) {
+
+        String fileName = null;
+
+        if (file.getContentType().contains("image")) {
+            fileName = id + "_" + UUID.randomUUID() + ".jpg";
+        } else {
+            fileName = id + file.getOriginalFilename();
+        }
+        String uniqueFileName = pathType + fileName;
+        try {
+
+            awsUploadObject(uniqueFileName, file);
+
+            updateImagePath(id, pathType, pathType + "/" + fileName);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new FileStorageException("Error converting the multi-part file to file= ", e);
+        }
+
+        return fileName;
+    }
+
+
+    public void awsUploadObject(final String uniqueFileName, final MultipartFile multipartFile) {
+
+        log.info("Uploading file with name= " + uniqueFileName);
+
+        try {
+
+            ObjectMetadata meta = new ObjectMetadata();
+            meta.setContentLength(IOUtils.toByteArray(multipartFile.getInputStream()).length);
+
+            final PutObjectRequest putObjectRequest = new PutObjectRequest(awsBucketName, uniqueFileName,
+                    multipartFile.getInputStream(), meta).withCannedAcl(CannedAccessControlList.PublicRead);
+
+            PutObjectResult result = amazonS3.putObject(putObjectRequest);
+            log.info("File uploaded successfully result" + result.toString());
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * @param fileUrl
+     */
+    public void awsDeleteObject(String fileUrl) {
+        final DeleteObjectRequest req = new DeleteObjectRequest(awsBucketName, fileUrl);
+        amazonS3.deleteObject(req);
+        log.info("File deleted from bucket " + awsBucketName + " as " + fileUrl);
+    }
+
+    /* End AWS*/
+
 }
