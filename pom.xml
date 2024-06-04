@@ -16,6 +16,7 @@
     <properties>
         <java.version>1.8</java.version>
         <aws-java-sdk.version>1.11.750</aws-java-sdk.version>
+        <google-cloud-storage>2.3.0</google-cloud-storage>
     </properties>
     <dependencies>
         <dependency>
@@ -128,6 +129,13 @@
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-s3</artifactId>
             <version>${aws-java-sdk.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.cloud/google-cloud-storage -->
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-storage</artifactId>
+            <version>${google-cloud-storage}</version>
         </dependency>
     </dependencies>
 
