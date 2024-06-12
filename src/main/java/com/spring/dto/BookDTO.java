@@ -19,15 +19,15 @@ public class BookDTO {
 
     private Long id;
 
-    @NotNull
-    @NotEmpty
-    @NotBlank
+//    @NotNull
+//    @NotEmpty
+//    @NotBlank
     private String name;
 
     @Min(value = 5)
     @Max(value = 500)
     private double price;
 
-    @NotEmpty
+//    @NotEmpty
     private Author author;
 }

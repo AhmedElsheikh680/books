@@ -4,6 +4,7 @@ package com.spring.entity;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.spring.entity.base.BaseEntity;
 import com.spring.validator.IpAddress;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,7 +22,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "authors")
-
+@Schema(name = "Author Schema")
 public class Author extends BaseEntity<Long> {
 
 //    @Pattern(regexp = "^([0-9]{1,3})\\.([0-9]{1,3})\\.([0-9]{1,3})\\.([0-9]{1,3})$")
