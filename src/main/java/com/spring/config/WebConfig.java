@@ -4,6 +4,7 @@ package com.spring.config;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
@@ -23,6 +24,7 @@ import java.security.cert.X509Certificate;
 
 @Configuration
 @EnableJpaAuditing(auditorAwareRef = "auditorAware")
+@EnableAspectJAutoProxy
 public class WebConfig implements WebMvcConfigurer {
 
     @Bean

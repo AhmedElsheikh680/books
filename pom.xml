@@ -145,6 +145,11 @@
 		    <artifactId>springdoc-openapi-ui</artifactId>
 		    <version>${springdoc.version}</version>
 		</dependency>
+        <!-- AOP  Aspect oriented programming -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
