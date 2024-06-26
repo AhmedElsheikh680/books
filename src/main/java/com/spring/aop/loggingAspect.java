@@ -6,27 +6,17 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Aspect
+@Order(1)
 @Component
-public class logTimeAspect {
+public class loggingAspect {
 
-    Logger log = LoggerFactory.getLogger(logTimeAspect.class);
+    Logger log = LoggerFactory.getLogger(loggingAspect.class);
 
-//    @Around(value = "execution(* com.spring.service..*(..))")
-//    public Object logTime(ProceedingJoinPoint joinPoint) throws Throwable {
-//
-//        long startTime = System.currentTimeMillis();
-//        StringBuilder sb = new StringBuilder("KPI:");
-//        sb.append("[").append(joinPoint.getKind()).append("]\tfor: ").append(joinPoint.getSignature())
-//                .append("\twithArgs: ").append("(").append(StringUtils.join(joinPoint.getArgs(), ",")).append(")");
-//        sb.append("\ttook: ");
-//        Object returnValue = joinPoint.proceed();
-//        log.info(sb.append(System.currentTimeMillis() - startTime).append(" ms.").toString());
-//
-//        return returnValue;
-//    }
+
 
     @Pointcut(value="execution(* com.spring.repo..*(..))")
     public void forRepositoryLog(){}
