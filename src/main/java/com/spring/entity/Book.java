@@ -35,7 +35,8 @@ public class Book extends BaseEntity<Long> {
 
 
 //    @NotNull
-    @ManyToOne(fetch = FetchType.LAZY)
+//    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "author_id")
     @JsonBackReference
     private Author author;

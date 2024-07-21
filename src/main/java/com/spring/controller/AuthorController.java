@@ -11,6 +11,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -21,10 +23,11 @@ import javax.validation.Valid;
 @Validated
 @RestController
 @RequestMapping("/author")
-@Tag(name = "Author Controller")
+@Tag(name = "Author Controller5")
 public class AuthorController {
 
 
+    private static final Logger log = LoggerFactory.getLogger(AuthorController.class);
     @Autowired
     private AuthorService authorService;
 
@@ -45,7 +48,10 @@ public class AuthorController {
     })
     @Operation(summary = "Find Author by Id")
     public ResponseEntity<?> findById(@Parameter( example = "20",name = "Book Id") @PathVariable Long id) {
-
+        if (id ==null) {
+            log.error("Invalid ID supplied!!!!");
+            return ResponseEntity.badRequest().body("Invalid ID Supplied !!!!!!!!!!!!");
+        }
         return ResponseEntity.ok(authorService.findById(id));
     }
 

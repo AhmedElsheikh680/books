@@ -1,6 +1,7 @@
 package com.spring.config;
 
 
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,6 +24,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.cert.X509Certificate;
 
 @Configuration
+@EnableCaching
 @EnableJpaAuditing(auditorAwareRef = "auditorAware")
 @EnableAspectJAutoProxy
 public class WebConfig implements WebMvcConfigurer {

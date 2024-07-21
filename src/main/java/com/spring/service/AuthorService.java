@@ -10,11 +10,12 @@ import com.spring.repo.AuthorSpec;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Async;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
+import java.util.Optional;
 
 @Service
 public class AuthorService extends BaseService<Author, Long> {
@@ -26,15 +27,31 @@ public class AuthorService extends BaseService<Author, Long> {
     private AuthorRepo authorRepo;
 
     @Override
+    @Cacheable(value = "findAllAuthorCache", key = "#root.methodName")
+    public List<Author> findAll() {
+        return super.findAll();
+    }
+
+    @Override
+    @Cacheable(value = "findByIdCache", key = "#aLong")
+    public Author findById(Long aLong) {
+        if (aLong == null) {
+            logger.info("The Id parameter must not be null................");
+        }
+        return super.findById(aLong);
+    }
+
+    @Override
+    @CacheEvict(value = {"findAllAuthorCache,findByIdCache, findAuthorByEmail"}, key = "#root.methodName", allEntries=true)
     public Author save(Author author) {
 
         if (!author.getEmail().isEmpty() && author.getEmail() !=null) {
-//           Optional<Author> entity =  findByEmail(author.getEmail());
-           CompletableFuture<Author> entity =  findByEmail(author.getEmail());
+           Optional<Author> entity =  findByEmail(author.getEmail());
+//           CompletableFuture<Author> entity =  findByEmail(author.getEmail());
            logger.info("Author Name is {} and email is " + author.getName(), author.getEmail());
             System.out.println("Email: "+ author.getEmail());
-//           if (entity.isPresent()) {
-           if (entity.isDone()) {
+           if (entity.isPresent()) {
+//           if (entity.isDone()) {
 //               throw new DuplicateRecordException("This Email already exist");
                logger.error("This Email already exist!!!!!!!!!!");
                throw new DuplicateRecordException();
@@ -44,6 +61,7 @@ public class AuthorService extends BaseService<Author, Long> {
     }
 
     @Override
+    @CacheEvict(value = {"findAllAuthorCache,findByIdCache, findAuthorByEmail"}, key = "#root.methodName", allEntries = true)
     public Author update(Author entity) {
 
        Author author =  findById(entity.getId());
@@ -56,12 +74,13 @@ public class AuthorService extends BaseService<Author, Long> {
         return authorRepo.findAll(authorSpec);
     }
 
-//    public Optional<Author> findByEmail(String email) {
-//        return authorRepo.findByEmail(email);
-//    }
-
-    @Async(value = "threadPoolTaskExecutor")
-    public CompletableFuture<Author> findByEmail(String email) {
-        return CompletableFuture.completedFuture(authorRepo.findByEmail(email).get());
+    @Cacheable(value = "findAuthorByEmail", key = "#email")
+    public Optional<Author> findByEmail(String email) {
+        return authorRepo.findByEmail(email);
     }
+
+//    @Async(value = "threadPoolTaskExecutor")
+//    public CompletableFuture<Author> findByEmail(String email) {
+//        return CompletableFuture.completedFuture(authorRepo.findByEmail(email).get());
+//    }
 }
