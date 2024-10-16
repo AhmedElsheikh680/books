@@ -1,4 +1,4 @@
-package com.spring.entity.base;
+package com.spring.base;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

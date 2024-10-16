@@ -1,4 +1,4 @@
-package com.spring.entity.base;
+package com.spring.base;
 
 
 import com.spring.config.Translator;

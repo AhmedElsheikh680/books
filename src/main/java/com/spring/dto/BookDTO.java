@@ -1,19 +1,19 @@
 package com.spring.dto;
 
 
-import com.spring.entity.Author;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
+//@Builder
 
 public class BookDTO {
 
@@ -29,5 +29,8 @@ public class BookDTO {
     private double price;
 
 //    @NotEmpty
-    private Author author;
+    @NotNull
+    private AuthorDTO authorDTO;
+    private String authorName;
+    private String authorEmail;
 }

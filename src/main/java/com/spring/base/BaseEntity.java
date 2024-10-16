@@ -1,4 +1,4 @@
-package com.spring.entity.base;
+package com.spring.base;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,7 +10,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @MappedSuperclass
 @Data
@@ -26,7 +26,7 @@ public abstract class BaseEntity <ID>{
 //    @NotNull(message = "Should Be Enter Name")
 //    @NotEmpty
 //    @NotBlank
-    private String name;
+//    private String name;
 
     private String statusCode;
 
@@ -34,12 +34,14 @@ public abstract class BaseEntity <ID>{
     private String createdBy;
 
     @CreatedDate
-    private LocalDateTime createdDate;
+//    private LocalDateTime createdDate;
+    private Date createdDate;
 
     @LastModifiedBy
     private String lastModifiedBy;
     @LastModifiedDate
-    private LocalDateTime lastModifiedDate;
+//    private LocalDateTime lastModifiedDate;
+    private Date lastModifiedDate;
 
 
 }

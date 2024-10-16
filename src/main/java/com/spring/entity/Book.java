@@ -2,7 +2,7 @@ package com.spring.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.spring.entity.base.BaseEntity;
+import com.spring.base.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,6 +11,7 @@ import org.hibernate.annotations.Formula;
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 
 @NamedEntityGraph(name = "loadAuthor", attributeNodes = @NamedAttributeNode("author"))
@@ -34,7 +35,7 @@ public class Book extends BaseEntity<Long> {
 
 
 
-//    @NotNull
+    @NotNull
 //    @ManyToOne(fetch = FetchType.LAZY)
     @ManyToOne()
     @JoinColumn(name = "author_id")

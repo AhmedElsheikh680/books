@@ -23,9 +23,9 @@ public class BookController {
         Book book = bookService.findById(id);
         BookDTO bookDTO = new BookDTO();
         bookDTO.setId(book.getId());
-        bookDTO.setName(book.getName());
+//        bookDTO.setName(book.getName());
         bookDTO.setPrice(book.getPrice());
-        bookDTO.setAuthor(book.getAuthor());
+//        bookDTO.setAuthor(book.getAuthor());
 
         return ResponseEntity.ok(bookDTO);
     }
@@ -39,9 +39,9 @@ public class BookController {
     public ResponseEntity<?> save(@RequestBody @Valid BookDTO dto) {
 
         Book book = new Book();
-        book.setName(dto.getName());
+//        book.setName(dto.getName());
         book.setPrice(dto.getPrice());
-        book.setAuthor(dto.getAuthor());
+//        book.setAuthor(dto.getAuthor());
         return ResponseEntity.ok(bookService.save(book));
     }
 

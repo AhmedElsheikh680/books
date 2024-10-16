@@ -3,7 +3,7 @@ package com.spring.service;
 
 import com.spring.entity.Author;
 import com.spring.entity.AuthorSearch;
-import com.spring.entity.base.BaseService;
+import com.spring.base.BaseService;
 import com.spring.exception.DuplicateRecordException;
 import com.spring.repo.AuthorRepo;
 import com.spring.repo.AuthorSpec;
@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,13 +28,16 @@ public class AuthorService extends BaseService<Author, Long> {
     private AuthorRepo authorRepo;
 
     @Override
-    @Cacheable(value = "findAllAuthorCache", key = "#root.methodName")
+//    @Cacheable(value = "findAllAuthorCache", key = "#root.methodName")
+    @Cacheable(value = "author", key = "#root.methodName")
     public List<Author> findAll() {
         return super.findAll();
     }
 
     @Override
-    @Cacheable(value = "findByIdCache", key = "#aLong")
+//    @Cacheable(value = "findByIdCache", key = "#aLong")
+    @Cacheable(value = "author", key = "#aLong")
+//    @CachePut(value ="author", key = "#aLong")
     public Author findById(Long aLong) {
         if (aLong == null) {
             logger.info("The Id parameter must not be null................");
@@ -42,13 +46,14 @@ public class AuthorService extends BaseService<Author, Long> {
     }
 
     @Override
-    @CacheEvict(value = {"findAllAuthorCache,findByIdCache, findAuthorByEmail"}, key = "#root.methodName", allEntries=true)
+//    @CacheEvict(value = {"findAllAuthorCache,findByIdCache, findAuthorByEmail"}, key = "#root.methodName", allEntries=true)
+    @CacheEvict(value = {"author"}, key = "#root.methodName", allEntries=true)
     public Author save(Author author) {
 
         if (!author.getEmail().isEmpty() && author.getEmail() !=null) {
            Optional<Author> entity =  findByEmail(author.getEmail());
 //           CompletableFuture<Author> entity =  findByEmail(author.getEmail());
-           logger.info("Author Name is {} and email is " + author.getName(), author.getEmail());
+           logger.info("Author Name is {} and email is " + author.getFullName(), author.getEmail());
             System.out.println("Email: "+ author.getEmail());
            if (entity.isPresent()) {
 //           if (entity.isDone()) {
@@ -61,11 +66,13 @@ public class AuthorService extends BaseService<Author, Long> {
     }
 
     @Override
-    @CacheEvict(value = {"findAllAuthorCache,findByIdCache, findAuthorByEmail"}, key = "#root.methodName", allEntries = true)
+//    @CacheEvict(value = {"findAllAuthorCache,findByIdCache, findAuthorByEmail"}, key = "#root.methodName", allEntries = true)
+//    @CacheEvict(value = {"author"}, key = "#root.methodName", allEntries = true)
+  @Caching(evict = {@CacheEvict("author"), @CacheEvict(value = "author", key="#entity.id")})
     public Author update(Author entity) {
 
        Author author =  findById(entity.getId());
-       author.setName(entity.getName());
+       author.setFullName(entity.getFullName());
         return super.update(author);
     }
 

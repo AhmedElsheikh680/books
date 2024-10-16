@@ -1,7 +1,7 @@
 package com.spring.repo;
 
 import com.spring.entity.Book;
-import com.spring.entity.base.BaseRepository;
+import com.spring.base.BaseRepository;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
