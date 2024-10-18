@@ -33,4 +33,6 @@ public class BookDTO {
     private AuthorDTO authorDTO;
     private String authorName;
     private String authorEmail;
+
+    private Boolean isFavorate;
 }

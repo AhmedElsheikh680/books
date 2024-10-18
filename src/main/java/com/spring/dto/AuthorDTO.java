@@ -7,6 +7,8 @@ import lombok.Data;
 @Builder
 public class AuthorDTO{
 
+    private long id;
+
     private String name;
     private String ipAddress;
     private String email;

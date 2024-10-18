@@ -3,8 +3,9 @@ package com.spring.mapper;
 import com.spring.dto.AuthorDTO;
 import com.spring.entity.Author;
 import org.mapstruct.*;
-
 import org.springframework.context.i18n.LocaleContextHolder;
+
+import java.util.List;
 
 //@Mapper(componentModel = "spring")
 @Mapper(imports = LocaleContextHolder.class)
@@ -20,11 +21,21 @@ public interface AuthorMapper {
     })
 //    AuthorDTO mapToDTO(Author author);
     AuthorDTO map(Author author);
+    List<AuthorDTO> map(List<Author> authors);
 
     // convert from dto to entity
     @Mapping(target = "fullName", source = "name")
 //    Author mapToEntity(AuthorDTO authorDTO);
     Author unMap(AuthorDTO authorDTO);
+
+    @Mapping(target = "fullName", source = "name")
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "bookCount", ignore = true)
+    @Mapping(target = "imagePath", ignore = true)
+    Author unMap(AuthorDTO authorDTO, @MappingTarget Author author);
+
+    List<Author> unMap(List<AuthorDTO> dtos);
+
 
     @AfterMapping
     default void mapName(Author author, @MappingTarget AuthorDTO authorDTO) {

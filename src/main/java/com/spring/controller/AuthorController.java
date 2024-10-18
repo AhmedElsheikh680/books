@@ -21,6 +21,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Validated
 @RestController
@@ -70,7 +71,10 @@ public class AuthorController {
     @GetMapping("")
     @Operation(summary = "Find All Authors")
     public ResponseEntity<?> findAll() {
-        return ResponseEntity.ok(authorService.findAll());
+
+        List<Author> authors  = authorService.findAll();
+        List<AuthorDTO> dtos = authorMapper.map(authors);
+        return ResponseEntity.ok(dtos);
     }
 
     @PostMapping("")
@@ -93,9 +97,10 @@ public class AuthorController {
 //        return ResponseEntity.ok(authorService.save(entity));
 //    }
     public ResponseEntity<?> update(@RequestBody @Valid AuthorDTO authorDTO) {
-        Author author = authorMapper.unMap(authorDTO);
-        Author entity = authorService.save(author);
-        AuthorDTO dto = authorMapper.map(entity);
+        Author entity= authorService.findById(authorDTO.getId());
+        Author author = authorMapper.unMap(authorDTO, entity);
+        Author returnedEntity = authorService.update(author);
+        AuthorDTO dto = authorMapper.map(returnedEntity);
         return ResponseEntity.ok(dto);
     }
 

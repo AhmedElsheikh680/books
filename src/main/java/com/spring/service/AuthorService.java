@@ -71,9 +71,9 @@ public class AuthorService extends BaseService<Author, Long> {
   @Caching(evict = {@CacheEvict("author"), @CacheEvict(value = "author", key="#entity.id")})
     public Author update(Author entity) {
 
-       Author author =  findById(entity.getId());
-       author.setFullName(entity.getFullName());
-        return super.update(author);
+//       Author author =  findById(entity.getId());
+//       author.setFullName(entity.getFullName());
+        return super.update(entity);
     }
 
     public List<Author> findByAuthorSpec(AuthorSearch authorSearch) {
