@@ -1,1000 +1,1040 @@
-2024-10-16 19:17:52 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-16 19:17:52 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 86020 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-16 19:17:52 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-16 19:17:52 No active profile set, falling back to 1 default profile: "default"
-2024-10-16 19:17:52 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@319dead1
-2024-10-16 19:17:53 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-16 19:17:53 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-16 19:17:53 Finished Spring Data repository scanning in 222 ms. Found 2 JPA repository interfaces.
-2024-10-16 19:17:56 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-16 19:17:56 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-16 19:17:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-16 19:17:57 HikariPool-1 - Starting...
-2024-10-16 19:17:58 HikariPool-1 - Start completed.
-2024-10-16 19:17:58 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-16 19:17:59 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-16 19:17:59 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 19:18:01 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-16 19:18:01 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-16 19:18:01 25 mappings in 'requestMappingHandlerMapping'
-2024-10-16 19:18:02 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-16 19:18:02 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-16 19:18:03 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-16 19:18:03 Started SpringDataJpaHrProjectApplicationTests in 11.475 seconds (JVM running for 13.412)
-2024-10-16 19:18:03 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-16 19:18:03 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-16 19:18:03 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-16 19:18:04 
-    select
-        author0_.id as id1_0_,
-        author0_.created_by as created_2_0_,
-        author0_.created_date as created_3_0_,
-        author0_.last_modified_by as last_mod4_0_,
-        author0_.last_modified_date as last_mod5_0_,
-        author0_.status_code as status_c6_0_,
-        author0_.email as email7_0_,
-        author0_.full_name as full_nam8_0_,
-        author0_.image_path as image_pa9_0_,
-        author0_.ip_address as ip_addr10_0_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author0_.id) as formula1_ 
-    from
-        authors author0_
-2024-10-16 19:18:04 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 1022 ms.
-2024-10-16 19:18:04 
-    select
-        book0_.id as id1_1_0_,
-        author1_.id as id1_0_1_,
-        book0_.created_by as created_2_1_0_,
-        book0_.created_date as created_3_1_0_,
-        book0_.last_modified_by as last_mod4_1_0_,
-        book0_.last_modified_date as last_mod5_1_0_,
-        book0_.status_code as status_c6_1_0_,
-        book0_.author_id as author_i8_1_0_,
-        book0_.price as price7_1_0_,
-        (select
-            count(*) 
-        from
-            books) as formula2_0_,
-        author1_.created_by as created_2_0_1_,
-        author1_.created_date as created_3_0_1_,
-        author1_.last_modified_by as last_mod4_0_1_,
-        author1_.last_modified_date as last_mod5_0_1_,
-        author1_.status_code as status_c6_0_1_,
-        author1_.email as email7_0_1_,
-        author1_.full_name as full_nam8_0_1_,
-        author1_.image_path as image_pa9_0_1_,
-        author1_.ip_address as ip_addr10_0_1_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author1_.id) as formula1_1_ 
-    from
-        books book0_ 
-    left outer join
-        authors author1_ 
-            on book0_.author_id=author1_.id
-2024-10-16 19:18:04 Closing org.springframework.web.context.support.GenericWebApplicationContext@319dead1, started on Wed Oct 16 19:17:52 EET 2024
-2024-10-16 19:18:04 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 19:18:04 HikariPool-1 - Shutdown initiated...
-2024-10-16 19:18:04 HikariPool-1 - Shutdown completed.
-2024-10-16 19:18:31 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-16 19:18:31 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 16860 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-16 19:18:31 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-16 19:18:31 No active profile set, falling back to 1 default profile: "default"
-2024-10-16 19:18:31 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2baa8d82
-2024-10-16 19:18:32 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-16 19:18:32 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-16 19:18:32 Finished Spring Data repository scanning in 204 ms. Found 2 JPA repository interfaces.
-2024-10-16 19:18:34 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-16 19:18:34 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-16 19:18:34 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-16 19:18:34 HikariPool-1 - Starting...
-2024-10-16 19:18:35 HikariPool-1 - Start completed.
-2024-10-16 19:18:35 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-16 19:18:36 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-16 19:18:36 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 19:18:37 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-16 19:18:38 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-16 19:18:38 25 mappings in 'requestMappingHandlerMapping'
-2024-10-16 19:18:39 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-16 19:18:39 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-16 19:18:40 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-16 19:18:40 Started SpringDataJpaHrProjectApplicationTests in 9.273 seconds (JVM running for 10.396)
-2024-10-16 19:18:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-16 19:18:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-16 19:18:40 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-16 19:18:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 279 ms.
-2024-10-16 19:18:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 279 ms.
-2024-10-16 19:18:41 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 1543 ms.
-2024-10-16 19:18:41 
-    select
-        book0_.id as id1_1_0_,
-        author1_.id as id1_0_1_,
-        book0_.created_by as created_2_1_0_,
-        book0_.created_date as created_3_1_0_,
-        book0_.last_modified_by as last_mod4_1_0_,
-        book0_.last_modified_date as last_mod5_1_0_,
-        book0_.status_code as status_c6_1_0_,
-        book0_.author_id as author_i8_1_0_,
-        book0_.price as price7_1_0_,
-        (select
-            count(*) 
-        from
-            books) as formula2_0_,
-        author1_.created_by as created_2_0_1_,
-        author1_.created_date as created_3_0_1_,
-        author1_.last_modified_by as last_mod4_0_1_,
-        author1_.last_modified_date as last_mod5_0_1_,
-        author1_.status_code as status_c6_0_1_,
-        author1_.email as email7_0_1_,
-        author1_.full_name as full_nam8_0_1_,
-        author1_.image_path as image_pa9_0_1_,
-        author1_.ip_address as ip_addr10_0_1_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author1_.id) as formula1_1_ 
-    from
-        books book0_ 
-    left outer join
-        authors author1_ 
-            on book0_.author_id=author1_.id
-2024-10-16 19:18:42 Closing org.springframework.web.context.support.GenericWebApplicationContext@2baa8d82, started on Wed Oct 16 19:18:31 EET 2024
-2024-10-16 19:18:42 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 19:18:42 HikariPool-1 - Shutdown initiated...
-2024-10-16 19:18:42 HikariPool-1 - Shutdown completed.
-2024-10-16 19:20:25 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-16 19:20:25 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 16012 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-16 19:20:25 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-16 19:20:25 No active profile set, falling back to 1 default profile: "default"
-2024-10-16 19:20:25 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@319dead1
-2024-10-16 19:20:26 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-16 19:20:26 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-16 19:20:27 Finished Spring Data repository scanning in 257 ms. Found 2 JPA repository interfaces.
-2024-10-16 19:20:29 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-16 19:20:29 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-16 19:20:29 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-16 19:20:30 HikariPool-1 - Starting...
-2024-10-16 19:20:31 HikariPool-1 - Start completed.
-2024-10-16 19:20:31 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-16 19:20:32 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-16 19:20:32 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 19:20:35 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-16 19:20:36 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-16 19:20:36 25 mappings in 'requestMappingHandlerMapping'
-2024-10-16 19:20:37 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-16 19:20:37 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-16 19:20:39 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-16 19:20:39 Started SpringDataJpaHrProjectApplicationTests in 14.017 seconds (JVM running for 15.441)
-2024-10-16 19:20:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-16 19:20:39 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-16 19:20:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-16 19:20:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 301 ms.
-2024-10-16 19:20:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 312 ms.
-2024-10-16 19:20:40 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 1488 ms.
-2024-10-16 19:20:40 
-    select
-        book0_.id as id1_1_0_,
-        author1_.id as id1_0_1_,
-        book0_.created_by as created_2_1_0_,
-        book0_.created_date as created_3_1_0_,
-        book0_.last_modified_by as last_mod4_1_0_,
-        book0_.last_modified_date as last_mod5_1_0_,
-        book0_.status_code as status_c6_1_0_,
-        book0_.author_id as author_i8_1_0_,
-        book0_.price as price7_1_0_,
-        (select
-            count(*) 
-        from
-            books) as formula2_0_,
-        author1_.created_by as created_2_0_1_,
-        author1_.created_date as created_3_0_1_,
-        author1_.last_modified_by as last_mod4_0_1_,
-        author1_.last_modified_date as last_mod5_0_1_,
-        author1_.status_code as status_c6_0_1_,
-        author1_.email as email7_0_1_,
-        author1_.full_name as full_nam8_0_1_,
-        author1_.image_path as image_pa9_0_1_,
-        author1_.ip_address as ip_addr10_0_1_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author1_.id) as formula1_1_ 
-    from
-        books book0_ 
-    left outer join
-        authors author1_ 
-            on book0_.author_id=author1_.id
-2024-10-16 19:20:40 Closing org.springframework.web.context.support.GenericWebApplicationContext@319dead1, started on Wed Oct 16 19:20:25 EET 2024
-2024-10-16 19:20:40 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 19:20:41 HikariPool-1 - Shutdown initiated...
-2024-10-16 19:20:41 HikariPool-1 - Shutdown completed.
-2024-10-16 19:21:00 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-16 19:21:00 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 94092 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-16 19:21:00 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-16 19:21:00 No active profile set, falling back to 1 default profile: "default"
-2024-10-16 19:21:00 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2baa8d82
-2024-10-16 19:21:01 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-16 19:21:01 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-16 19:21:01 Finished Spring Data repository scanning in 208 ms. Found 2 JPA repository interfaces.
-2024-10-16 19:21:03 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-16 19:21:03 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-16 19:21:03 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-16 19:21:04 HikariPool-1 - Starting...
-2024-10-16 19:21:05 HikariPool-1 - Start completed.
-2024-10-16 19:21:05 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-16 19:21:06 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-16 19:21:06 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 19:21:07 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-16 19:21:07 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-16 19:21:07 25 mappings in 'requestMappingHandlerMapping'
-2024-10-16 19:21:08 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-16 19:21:08 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-16 19:21:09 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-16 19:21:09 Started SpringDataJpaHrProjectApplicationTests in 9.947 seconds (JVM running for 11.132)
-2024-10-16 19:21:09 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-16 19:21:09 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-16 19:21:09 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-16 19:21:09 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 105 ms.
-2024-10-16 19:21:09 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 106 ms.
-2024-10-16 19:21:10 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 823 ms.
-2024-10-16 19:21:10 
-    select
-        book0_.id as id1_1_0_,
-        author1_.id as id1_0_1_,
-        book0_.created_by as created_2_1_0_,
-        book0_.created_date as created_3_1_0_,
-        book0_.last_modified_by as last_mod4_1_0_,
-        book0_.last_modified_date as last_mod5_1_0_,
-        book0_.status_code as status_c6_1_0_,
-        book0_.author_id as author_i8_1_0_,
-        book0_.price as price7_1_0_,
-        (select
-            count(*) 
-        from
-            books) as formula2_0_,
-        author1_.created_by as created_2_0_1_,
-        author1_.created_date as created_3_0_1_,
-        author1_.last_modified_by as last_mod4_0_1_,
-        author1_.last_modified_date as last_mod5_0_1_,
-        author1_.status_code as status_c6_0_1_,
-        author1_.email as email7_0_1_,
-        author1_.full_name as full_nam8_0_1_,
-        author1_.image_path as image_pa9_0_1_,
-        author1_.ip_address as ip_addr10_0_1_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author1_.id) as formula1_1_ 
-    from
-        books book0_ 
-    left outer join
-        authors author1_ 
-            on book0_.author_id=author1_.id
-2024-10-16 19:21:10 Closing org.springframework.web.context.support.GenericWebApplicationContext@2baa8d82, started on Wed Oct 16 19:21:00 EET 2024
-2024-10-16 19:21:10 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 19:21:11 HikariPool-1 - Shutdown initiated...
-2024-10-16 19:21:11 HikariPool-1 - Shutdown completed.
-2024-10-16 19:26:00 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-16 19:26:00 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 70784 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-16 19:26:00 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-16 19:26:00 No active profile set, falling back to 1 default profile: "default"
-2024-10-16 19:26:00 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@319dead1
-2024-10-16 19:26:01 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-16 19:26:01 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-16 19:26:01 Finished Spring Data repository scanning in 167 ms. Found 2 JPA repository interfaces.
-2024-10-16 19:26:03 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-16 19:26:04 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-16 19:26:04 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-16 19:26:04 HikariPool-1 - Starting...
-2024-10-16 19:26:05 HikariPool-1 - Start completed.
-2024-10-16 19:26:05 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-16 19:26:06 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-16 19:26:06 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 19:26:07 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-16 19:26:08 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-16 19:26:08 25 mappings in 'requestMappingHandlerMapping'
-2024-10-16 19:26:09 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-16 19:26:09 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-16 19:26:10 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-16 19:26:10 Started SpringDataJpaHrProjectApplicationTests in 10.41 seconds (JVM running for 11.617)
-2024-10-16 19:26:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-16 19:26:10 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-16 19:26:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-16 19:26:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 94 ms.
-2024-10-16 19:26:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 96 ms.
-2024-10-16 19:26:11 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 849 ms.
-2024-10-16 19:26:11 
-    select
-        book0_.id as id1_1_0_,
-        author1_.id as id1_0_1_,
-        book0_.created_by as created_2_1_0_,
-        book0_.created_date as created_3_1_0_,
-        book0_.last_modified_by as last_mod4_1_0_,
-        book0_.last_modified_date as last_mod5_1_0_,
-        book0_.status_code as status_c6_1_0_,
-        book0_.author_id as author_i8_1_0_,
-        book0_.price as price7_1_0_,
-        (select
-            count(*) 
-        from
-            books) as formula2_0_,
-        author1_.created_by as created_2_0_1_,
-        author1_.created_date as created_3_0_1_,
-        author1_.last_modified_by as last_mod4_0_1_,
-        author1_.last_modified_date as last_mod5_0_1_,
-        author1_.status_code as status_c6_0_1_,
-        author1_.email as email7_0_1_,
-        author1_.full_name as full_nam8_0_1_,
-        author1_.image_path as image_pa9_0_1_,
-        author1_.ip_address as ip_addr10_0_1_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author1_.id) as formula1_1_ 
-    from
-        books book0_ 
-    left outer join
-        authors author1_ 
-            on book0_.author_id=author1_.id
-2024-10-16 19:26:11 Closing org.springframework.web.context.support.GenericWebApplicationContext@319dead1, started on Wed Oct 16 19:26:00 EET 2024
-2024-10-16 19:26:11 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 19:26:11 HikariPool-1 - Shutdown initiated...
-2024-10-16 19:26:11 HikariPool-1 - Shutdown completed.
-2024-10-16 19:34:11 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-16 19:34:11 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 47400 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-16 19:34:11 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-16 19:34:11 No active profile set, falling back to 1 default profile: "default"
-2024-10-16 19:34:11 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@319dead1
-2024-10-16 19:34:12 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-16 19:34:12 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-16 19:34:12 Finished Spring Data repository scanning in 181 ms. Found 2 JPA repository interfaces.
-2024-10-16 19:34:14 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-16 19:34:14 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-16 19:34:14 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-16 19:34:15 HikariPool-1 - Starting...
-2024-10-16 19:34:16 HikariPool-1 - Start completed.
-2024-10-16 19:34:16 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-16 19:34:16 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-16 19:34:16 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 19:34:18 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-16 19:34:18 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-16 19:34:18 25 mappings in 'requestMappingHandlerMapping'
-2024-10-16 19:34:19 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-16 19:34:19 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-16 19:34:20 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-16 19:34:20 Started SpringDataJpaHrProjectApplicationTests in 9.857 seconds (JVM running for 10.999)
-2024-10-16 19:34:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-16 19:34:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-16 19:34:20 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-16 19:34:21 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 748 ms.
-2024-10-16 19:34:21 ====> Method Name Is >> {}  List com.spring.repo.BookRepository.findAll()
-2024-10-16 19:34:21 
-    select
-        book0_.id as id1_1_0_,
-        author1_.id as id1_0_1_,
-        book0_.created_by as created_2_1_0_,
-        book0_.created_date as created_3_1_0_,
-        book0_.last_modified_by as last_mod4_1_0_,
-        book0_.last_modified_date as last_mod5_1_0_,
-        book0_.status_code as status_c6_1_0_,
-        book0_.author_id as author_i8_1_0_,
-        book0_.price as price7_1_0_,
-        (select
-            count(*) 
-        from
-            books) as formula2_0_,
-        author1_.created_by as created_2_0_1_,
-        author1_.created_date as created_3_0_1_,
-        author1_.last_modified_by as last_mod4_0_1_,
-        author1_.last_modified_date as last_mod5_0_1_,
-        author1_.status_code as status_c6_0_1_,
-        author1_.email as email7_0_1_,
-        author1_.full_name as full_nam8_0_1_,
-        author1_.image_path as image_pa9_0_1_,
-        author1_.ip_address as ip_addr10_0_1_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author1_.id) as formula1_1_ 
-    from
-        books book0_ 
-    left outer join
-        authors author1_ 
-            on book0_.author_id=author1_.id
-2024-10-16 19:34:21 Closing org.springframework.web.context.support.GenericWebApplicationContext@319dead1, started on Wed Oct 16 19:34:11 EET 2024
-2024-10-16 19:34:21 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 19:34:21 HikariPool-1 - Shutdown initiated...
-2024-10-16 19:34:21 HikariPool-1 - Shutdown completed.
-2024-10-16 20:23:05 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-16 20:23:05 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 69660 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-16 20:23:05 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-16 20:23:05 No active profile set, falling back to 1 default profile: "default"
-2024-10-16 20:23:05 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@319dead1
-2024-10-16 20:23:07 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-16 20:23:07 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-16 20:23:07 Finished Spring Data repository scanning in 228 ms. Found 2 JPA repository interfaces.
-2024-10-16 20:23:08 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-16 20:23:08 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-16 20:23:09 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-16 20:23:09 HikariPool-1 - Starting...
-2024-10-16 20:23:10 HikariPool-1 - Start completed.
-2024-10-16 20:23:10 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-16 20:23:11 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-16 20:23:11 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 20:23:13 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-16 20:23:14 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-16 20:23:14 25 mappings in 'requestMappingHandlerMapping'
-2024-10-16 20:23:15 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-16 20:23:15 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-16 20:23:16 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-16 20:23:16 Started SpringDataJpaHrProjectApplicationTests in 10.828 seconds (JVM running for 12.045)
-2024-10-16 20:23:16 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-16 20:23:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-16 20:23:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-16 20:23:17 
-    select
-        author0_.id as id1_0_,
-        author0_.created_by as created_2_0_,
-        author0_.created_date as created_3_0_,
-        author0_.last_modified_by as last_mod4_0_,
-        author0_.last_modified_date as last_mod5_0_,
-        author0_.status_code as status_c6_0_,
-        author0_.email as email7_0_,
-        author0_.full_name as full_nam8_0_,
-        author0_.image_path as image_pa9_0_,
-        author0_.ip_address as ip_addr10_0_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author0_.id) as formula1_ 
-    from
-        authors author0_
-2024-10-16 20:23:17 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 944 ms.
-2024-10-16 20:23:17 
-    select
-        book0_.id as id1_1_0_,
-        author1_.id as id1_0_1_,
-        book0_.created_by as created_2_1_0_,
-        book0_.created_date as created_3_1_0_,
-        book0_.last_modified_by as last_mod4_1_0_,
-        book0_.last_modified_date as last_mod5_1_0_,
-        book0_.status_code as status_c6_1_0_,
-        book0_.author_id as author_i8_1_0_,
-        book0_.price as price7_1_0_,
-        (select
-            count(*) 
-        from
-            books) as formula2_0_,
-        author1_.created_by as created_2_0_1_,
-        author1_.created_date as created_3_0_1_,
-        author1_.last_modified_by as last_mod4_0_1_,
-        author1_.last_modified_date as last_mod5_0_1_,
-        author1_.status_code as status_c6_0_1_,
-        author1_.email as email7_0_1_,
-        author1_.full_name as full_nam8_0_1_,
-        author1_.image_path as image_pa9_0_1_,
-        author1_.ip_address as ip_addr10_0_1_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author1_.id) as formula1_1_ 
-    from
-        books book0_ 
-    left outer join
-        authors author1_ 
-            on book0_.author_id=author1_.id
-2024-10-16 20:23:17 Closing org.springframework.web.context.support.GenericWebApplicationContext@319dead1, started on Wed Oct 16 20:23:05 EET 2024
-2024-10-16 20:23:17 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 20:23:17 HikariPool-1 - Shutdown initiated...
-2024-10-16 20:23:17 HikariPool-1 - Shutdown completed.
-2024-10-16 21:16:39 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-16 21:16:39 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 67896 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-16 21:16:39 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-16 21:16:39 No active profile set, falling back to 1 default profile: "default"
-2024-10-16 21:16:40 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@319dead1
-2024-10-16 21:16:41 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-16 21:16:41 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-16 21:16:41 Finished Spring Data repository scanning in 197 ms. Found 2 JPA repository interfaces.
-2024-10-16 21:16:42 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-16 21:16:42 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-16 21:16:43 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-16 21:16:43 HikariPool-1 - Starting...
-2024-10-16 21:16:44 HikariPool-1 - Start completed.
-2024-10-16 21:16:44 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-16 21:16:45 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-16 21:16:45 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 21:16:47 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-16 21:16:47 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-16 21:16:48 25 mappings in 'requestMappingHandlerMapping'
-2024-10-16 21:16:48 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-16 21:16:48 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-16 21:16:50 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-16 21:16:50 Started SpringDataJpaHrProjectApplicationTests in 10.944 seconds (JVM running for 12.121)
-2024-10-16 21:16:50 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-16 21:16:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-16 21:16:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-16 21:16:52 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 1412 ms.
-2024-10-16 21:16:52 
-    select
-        book0_.id as id1_1_0_,
-        author1_.id as id1_0_1_,
-        book0_.created_by as created_2_1_0_,
-        book0_.created_date as created_3_1_0_,
-        book0_.last_modified_by as last_mod4_1_0_,
-        book0_.last_modified_date as last_mod5_1_0_,
-        book0_.status_code as status_c6_1_0_,
-        book0_.author_id as author_i8_1_0_,
-        book0_.price as price7_1_0_,
-        (select
-            count(*) 
-        from
-            books) as formula2_0_,
-        author1_.created_by as created_2_0_1_,
-        author1_.created_date as created_3_0_1_,
-        author1_.last_modified_by as last_mod4_0_1_,
-        author1_.last_modified_date as last_mod5_0_1_,
-        author1_.status_code as status_c6_0_1_,
-        author1_.email as email7_0_1_,
-        author1_.full_name as full_nam8_0_1_,
-        author1_.image_path as image_pa9_0_1_,
-        author1_.ip_address as ip_addr10_0_1_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author1_.id) as formula1_1_ 
-    from
-        books book0_ 
-    left outer join
-        authors author1_ 
-            on book0_.author_id=author1_.id
-2024-10-16 21:16:52 Closing org.springframework.web.context.support.GenericWebApplicationContext@319dead1, started on Wed Oct 16 21:16:40 EET 2024
-2024-10-16 21:16:52 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 21:16:52 HikariPool-1 - Shutdown initiated...
-2024-10-16 21:16:52 HikariPool-1 - Shutdown completed.
-2024-10-16 21:18:04 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-16 21:18:04 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 29020 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-16 21:18:04 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-16 21:18:04 No active profile set, falling back to 1 default profile: "default"
-2024-10-16 21:18:04 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2baa8d82
-2024-10-16 21:18:05 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-16 21:18:05 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-16 21:18:05 Finished Spring Data repository scanning in 160 ms. Found 2 JPA repository interfaces.
-2024-10-16 21:18:06 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-16 21:18:06 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-16 21:18:07 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-16 21:18:07 HikariPool-1 - Starting...
-2024-10-16 21:18:08 HikariPool-1 - Start completed.
-2024-10-16 21:18:08 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-16 21:18:09 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-16 21:18:09 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 21:18:10 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-16 21:18:11 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-16 21:18:11 25 mappings in 'requestMappingHandlerMapping'
-2024-10-16 21:18:12 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-16 21:18:12 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-16 21:18:13 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-16 21:18:13 Started SpringDataJpaHrProjectApplicationTests in 9.31 seconds (JVM running for 10.448)
-2024-10-16 21:18:13 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-16 21:18:13 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-16 21:18:13 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-16 21:18:13 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 82 ms.
-2024-10-16 21:18:13 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 82 ms.
-2024-10-16 21:18:14 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 831 ms.
-2024-10-16 21:18:14 
-    select
-        book0_.id as id1_1_0_,
-        author1_.id as id1_0_1_,
-        book0_.created_by as created_2_1_0_,
-        book0_.created_date as created_3_1_0_,
-        book0_.last_modified_by as last_mod4_1_0_,
-        book0_.last_modified_date as last_mod5_1_0_,
-        book0_.status_code as status_c6_1_0_,
-        book0_.author_id as author_i8_1_0_,
-        book0_.price as price7_1_0_,
-        (select
-            count(*) 
-        from
-            books) as formula2_0_,
-        author1_.created_by as created_2_0_1_,
-        author1_.created_date as created_3_0_1_,
-        author1_.last_modified_by as last_mod4_0_1_,
-        author1_.last_modified_date as last_mod5_0_1_,
-        author1_.status_code as status_c6_0_1_,
-        author1_.email as email7_0_1_,
-        author1_.full_name as full_nam8_0_1_,
-        author1_.image_path as image_pa9_0_1_,
-        author1_.ip_address as ip_addr10_0_1_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author1_.id) as formula1_1_ 
-    from
-        books book0_ 
-    left outer join
-        authors author1_ 
-            on book0_.author_id=author1_.id
-2024-10-16 21:18:14 Closing org.springframework.web.context.support.GenericWebApplicationContext@2baa8d82, started on Wed Oct 16 21:18:04 EET 2024
-2024-10-16 21:18:14 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 21:18:14 HikariPool-1 - Shutdown initiated...
-2024-10-16 21:18:14 HikariPool-1 - Shutdown completed.
-2024-10-16 21:34:51 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-16 21:34:51 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 25200 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-16 21:34:51 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-16 21:34:51 No active profile set, falling back to 1 default profile: "default"
-2024-10-16 21:34:51 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@319dead1
-2024-10-16 21:34:52 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-16 21:34:52 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-16 21:34:52 Finished Spring Data repository scanning in 187 ms. Found 2 JPA repository interfaces.
-2024-10-16 21:34:54 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-16 21:34:54 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-16 21:34:54 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-16 21:34:56 HikariPool-1 - Starting...
-2024-10-16 21:34:57 HikariPool-1 - Start completed.
-2024-10-16 21:34:57 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-16 21:34:58 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-16 21:34:58 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 21:35:00 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-16 21:35:00 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-16 21:35:00 25 mappings in 'requestMappingHandlerMapping'
-2024-10-16 21:35:01 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-16 21:35:01 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-16 21:35:02 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-16 21:35:03 Started SpringDataJpaHrProjectApplicationTests in 12.332 seconds (JVM running for 13.464)
-2024-10-16 21:35:03 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-16 21:35:03 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-16 21:35:03 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-16 21:35:04 
-    select
-        author0_.id as id1_0_,
-        author0_.created_by as created_2_0_,
-        author0_.created_date as created_3_0_,
-        author0_.last_modified_by as last_mod4_0_,
-        author0_.last_modified_date as last_mod5_0_,
-        author0_.status_code as status_c6_0_,
-        author0_.email as email7_0_,
-        author0_.full_name as full_nam8_0_,
-        author0_.image_path as image_pa9_0_,
-        author0_.ip_address as ip_addr10_0_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author0_.id) as formula1_ 
-    from
-        authors author0_
-2024-10-16 21:35:04 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 1269 ms.
-2024-10-16 21:35:04 
-    select
-        book0_.id as id1_1_0_,
-        author1_.id as id1_0_1_,
-        book0_.created_by as created_2_1_0_,
-        book0_.created_date as created_3_1_0_,
-        book0_.last_modified_by as last_mod4_1_0_,
-        book0_.last_modified_date as last_mod5_1_0_,
-        book0_.status_code as status_c6_1_0_,
-        book0_.author_id as author_i8_1_0_,
-        book0_.price as price7_1_0_,
-        (select
-            count(*) 
-        from
-            books) as formula2_0_,
-        author1_.created_by as created_2_0_1_,
-        author1_.created_date as created_3_0_1_,
-        author1_.last_modified_by as last_mod4_0_1_,
-        author1_.last_modified_date as last_mod5_0_1_,
-        author1_.status_code as status_c6_0_1_,
-        author1_.email as email7_0_1_,
-        author1_.full_name as full_nam8_0_1_,
-        author1_.image_path as image_pa9_0_1_,
-        author1_.ip_address as ip_addr10_0_1_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author1_.id) as formula1_1_ 
-    from
-        books book0_ 
-    left outer join
-        authors author1_ 
-            on book0_.author_id=author1_.id
-2024-10-16 21:35:04 Closing org.springframework.web.context.support.GenericWebApplicationContext@319dead1, started on Wed Oct 16 21:34:51 EET 2024
-2024-10-16 21:35:04 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 21:35:04 HikariPool-1 - Shutdown initiated...
-2024-10-16 21:35:04 HikariPool-1 - Shutdown completed.
-2024-10-16 21:52:28 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-16 21:52:28 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 40664 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-16 21:52:28 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-16 21:52:28 No active profile set, falling back to 1 default profile: "default"
-2024-10-16 21:52:28 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@319dead1
-2024-10-16 21:52:29 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-16 21:52:29 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-16 21:52:29 Finished Spring Data repository scanning in 164 ms. Found 2 JPA repository interfaces.
-2024-10-16 21:52:31 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-16 21:52:31 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-16 21:52:31 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-16 21:52:32 HikariPool-1 - Starting...
-2024-10-16 21:52:33 HikariPool-1 - Start completed.
-2024-10-16 21:52:33 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-16 21:52:34 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-16 21:52:34 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 21:52:35 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-16 21:52:36 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-16 21:52:36 25 mappings in 'requestMappingHandlerMapping'
-2024-10-16 21:52:36 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-16 21:52:36 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-16 21:52:37 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-16 21:52:38 Started SpringDataJpaHrProjectApplicationTests in 9.939 seconds (JVM running for 11.062)
-2024-10-16 21:52:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-16 21:52:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-16 21:52:38 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-16 21:52:38 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 914 ms.
-2024-10-16 21:52:39 
-    select
-        book0_.id as id1_1_0_,
-        author1_.id as id1_0_1_,
-        book0_.created_by as created_2_1_0_,
-        book0_.created_date as created_3_1_0_,
-        book0_.last_modified_by as last_mod4_1_0_,
-        book0_.last_modified_date as last_mod5_1_0_,
-        book0_.status_code as status_c6_1_0_,
-        book0_.author_id as author_i8_1_0_,
-        book0_.price as price7_1_0_,
-        (select
-            count(*) 
-        from
-            books) as formula2_0_,
-        author1_.created_by as created_2_0_1_,
-        author1_.created_date as created_3_0_1_,
-        author1_.last_modified_by as last_mod4_0_1_,
-        author1_.last_modified_date as last_mod5_0_1_,
-        author1_.status_code as status_c6_0_1_,
-        author1_.email as email7_0_1_,
-        author1_.full_name as full_nam8_0_1_,
-        author1_.image_path as image_pa9_0_1_,
-        author1_.ip_address as ip_addr10_0_1_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author1_.id) as formula1_1_ 
-    from
-        books book0_ 
-    left outer join
-        authors author1_ 
-            on book0_.author_id=author1_.id
-2024-10-16 21:52:39 Closing org.springframework.web.context.support.GenericWebApplicationContext@319dead1, started on Wed Oct 16 21:52:28 EET 2024
-2024-10-16 21:52:39 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 21:52:39 HikariPool-1 - Shutdown initiated...
-2024-10-16 21:52:39 HikariPool-1 - Shutdown completed.
-2024-10-16 21:53:17 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-16 21:53:17 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 64984 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-16 21:53:17 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-16 21:53:17 No active profile set, falling back to 1 default profile: "default"
-2024-10-16 21:53:17 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2baa8d82
-2024-10-16 21:53:18 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-16 21:53:18 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-16 21:53:18 Finished Spring Data repository scanning in 165 ms. Found 2 JPA repository interfaces.
-2024-10-16 21:53:19 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-16 21:53:19 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-16 21:53:20 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-16 21:53:20 HikariPool-1 - Starting...
-2024-10-16 21:53:21 HikariPool-1 - Start completed.
-2024-10-16 21:53:21 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-16 21:53:22 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-16 21:53:22 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 21:53:23 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-16 21:53:24 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-16 21:53:24 25 mappings in 'requestMappingHandlerMapping'
-2024-10-16 21:53:25 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-16 21:53:25 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-16 21:53:26 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-16 21:53:26 Started SpringDataJpaHrProjectApplicationTests in 9.169 seconds (JVM running for 10.186)
-2024-10-16 21:53:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-16 21:53:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-16 21:53:26 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-16 21:53:26 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 114 ms.
-2024-10-16 21:53:26 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 115 ms.
-2024-10-16 21:53:27 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 904 ms.
-2024-10-16 21:53:27 
-    select
-        book0_.id as id1_1_0_,
-        author1_.id as id1_0_1_,
-        book0_.created_by as created_2_1_0_,
-        book0_.created_date as created_3_1_0_,
-        book0_.last_modified_by as last_mod4_1_0_,
-        book0_.last_modified_date as last_mod5_1_0_,
-        book0_.status_code as status_c6_1_0_,
-        book0_.author_id as author_i8_1_0_,
-        book0_.price as price7_1_0_,
-        (select
-            count(*) 
-        from
-            books) as formula2_0_,
-        author1_.created_by as created_2_0_1_,
-        author1_.created_date as created_3_0_1_,
-        author1_.last_modified_by as last_mod4_0_1_,
-        author1_.last_modified_date as last_mod5_0_1_,
-        author1_.status_code as status_c6_0_1_,
-        author1_.email as email7_0_1_,
-        author1_.full_name as full_nam8_0_1_,
-        author1_.image_path as image_pa9_0_1_,
-        author1_.ip_address as ip_addr10_0_1_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author1_.id) as formula1_1_ 
-    from
-        books book0_ 
-    left outer join
-        authors author1_ 
-            on book0_.author_id=author1_.id
-2024-10-16 21:53:27 Closing org.springframework.web.context.support.GenericWebApplicationContext@2baa8d82, started on Wed Oct 16 21:53:17 EET 2024
-2024-10-16 21:53:27 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 21:53:27 HikariPool-1 - Shutdown initiated...
-2024-10-16 21:53:27 HikariPool-1 - Shutdown completed.
-2024-10-16 21:56:32 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-16 21:56:32 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 16336 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-16 21:56:32 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-16 21:56:32 No active profile set, falling back to 1 default profile: "default"
-2024-10-16 21:56:32 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2baa8d82
-2024-10-16 21:56:33 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-16 21:56:33 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-16 21:56:33 Finished Spring Data repository scanning in 206 ms. Found 2 JPA repository interfaces.
-2024-10-16 21:56:35 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-16 21:56:35 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-16 21:56:35 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-16 21:56:36 HikariPool-1 - Starting...
-2024-10-16 21:56:37 HikariPool-1 - Start completed.
-2024-10-16 21:56:37 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-16 21:56:37 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-16 21:56:37 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 21:56:39 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-16 21:56:39 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-16 21:56:39 25 mappings in 'requestMappingHandlerMapping'
-2024-10-16 21:56:40 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-16 21:56:40 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-16 21:56:41 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-16 21:56:41 Started SpringDataJpaHrProjectApplicationTests in 9.325 seconds (JVM running for 10.553)
-2024-10-16 21:56:41 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-16 21:56:41 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-16 21:56:41 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-16 21:56:41 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 96 ms.
-2024-10-16 21:56:41 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 96 ms.
-2024-10-16 21:56:42 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 889 ms.
-2024-10-16 21:56:42 
-    select
-        book0_.id as id1_1_0_,
-        author1_.id as id1_0_1_,
-        book0_.created_by as created_2_1_0_,
-        book0_.created_date as created_3_1_0_,
-        book0_.last_modified_by as last_mod4_1_0_,
-        book0_.last_modified_date as last_mod5_1_0_,
-        book0_.status_code as status_c6_1_0_,
-        book0_.author_id as author_i8_1_0_,
-        book0_.price as price7_1_0_,
-        (select
-            count(*) 
-        from
-            books) as formula2_0_,
-        author1_.created_by as created_2_0_1_,
-        author1_.created_date as created_3_0_1_,
-        author1_.last_modified_by as last_mod4_0_1_,
-        author1_.last_modified_date as last_mod5_0_1_,
-        author1_.status_code as status_c6_0_1_,
-        author1_.email as email7_0_1_,
-        author1_.full_name as full_nam8_0_1_,
-        author1_.image_path as image_pa9_0_1_,
-        author1_.ip_address as ip_addr10_0_1_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author1_.id) as formula1_1_ 
-    from
-        books book0_ 
-    left outer join
-        authors author1_ 
-            on book0_.author_id=author1_.id
-2024-10-16 21:56:42 Closing org.springframework.web.context.support.GenericWebApplicationContext@2baa8d82, started on Wed Oct 16 21:56:32 EET 2024
-2024-10-16 21:56:42 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 21:56:42 HikariPool-1 - Shutdown initiated...
-2024-10-16 21:56:42 HikariPool-1 - Shutdown completed.
-2024-10-16 22:15:46 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-16 22:15:46 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 63192 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-16 22:15:46 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-16 22:15:46 No active profile set, falling back to 1 default profile: "default"
-2024-10-16 22:15:46 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@319dead1
-2024-10-16 22:15:47 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-16 22:15:47 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-16 22:15:47 Finished Spring Data repository scanning in 232 ms. Found 2 JPA repository interfaces.
-2024-10-16 22:15:49 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-16 22:15:49 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-16 22:15:49 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-16 22:15:50 HikariPool-1 - Starting...
-2024-10-16 22:15:51 HikariPool-1 - Start completed.
-2024-10-16 22:15:51 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-16 22:15:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-16 22:15:52 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 22:15:53 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-16 22:15:54 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-16 22:15:54 25 mappings in 'requestMappingHandlerMapping'
-2024-10-16 22:15:55 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-16 22:15:55 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-16 22:15:56 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-16 22:15:56 Started SpringDataJpaHrProjectApplicationTests in 10.897 seconds (JVM running for 12.087)
-2024-10-16 22:15:56 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-16 22:15:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-16 22:15:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-16 22:15:57 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 1177 ms.
-2024-10-16 22:15:57 ====> Method Name Is >> {}  List com.spring.repo.BookRepository.findAll()
-2024-10-16 22:15:57 
-    select
-        book0_.id as id1_1_0_,
-        author1_.id as id1_0_1_,
-        book0_.created_by as created_2_1_0_,
-        book0_.created_date as created_3_1_0_,
-        book0_.last_modified_by as last_mod4_1_0_,
-        book0_.last_modified_date as last_mod5_1_0_,
-        book0_.status_code as status_c6_1_0_,
-        book0_.author_id as author_i8_1_0_,
-        book0_.price as price7_1_0_,
-        (select
-            count(*) 
-        from
-            books) as formula2_0_,
-        author1_.created_by as created_2_0_1_,
-        author1_.created_date as created_3_0_1_,
-        author1_.last_modified_by as last_mod4_0_1_,
-        author1_.last_modified_date as last_mod5_0_1_,
-        author1_.status_code as status_c6_0_1_,
-        author1_.email as email7_0_1_,
-        author1_.full_name as full_nam8_0_1_,
-        author1_.image_path as image_pa9_0_1_,
-        author1_.ip_address as ip_addr10_0_1_,
-        (select
-            COUNT(*) 
-        from
-            books book 
-        where
-            book.author_id = author1_.id) as formula1_1_ 
-    from
-        books book0_ 
-    left outer join
-        authors author1_ 
-            on book0_.author_id=author1_.id
-2024-10-16 22:15:58 Closing org.springframework.web.context.support.GenericWebApplicationContext@319dead1, started on Wed Oct 16 22:15:46 EET 2024
-2024-10-16 22:15:58 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-16 22:15:58 HikariPool-1 - Shutdown initiated...
-2024-10-16 22:15:58 HikariPool-1 - Shutdown completed.
+2024-10-18 22:04:14 HV000001: Hibernate Validator 6.2.5.Final
+2024-10-18 22:04:14 Starting SpringDataJpaHrProjectApplication using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 24344 (D:\intellij\books\target\classes started by Ahmed.Elsheikh in D:\intellij\books)
+2024-10-18 22:04:14 Running with Spring Boot v2.7.8, Spring v5.3.25
+2024-10-18 22:04:14 The following 1 profile is active: "dev"
+2024-10-18 22:04:14 Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-18 22:04:14 For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-18 22:04:16 Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-18 22:04:16 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-18 22:04:16 Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
+2024-10-18 22:04:17 Tomcat initialized with port(s): 1996 (http)
+2024-10-18 22:04:17 Initializing ProtocolHandler ["http-nio-1996"]
+2024-10-18 22:04:17 Starting service [Tomcat]
+2024-10-18 22:04:17 Starting Servlet engine: [Apache Tomcat/9.0.71]
+2024-10-18 22:04:17 Initializing Spring embedded WebApplicationContext
+2024-10-18 22:04:17 Root WebApplicationContext: initialization completed in 2595 ms
+2024-10-18 22:04:18 HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-18 22:04:18 HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-10-18 22:04:18 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-18 22:04:18 HikariPool-1 - Starting...
+2024-10-18 22:04:19 HikariPool-1 - Start completed.
+2024-10-18 22:04:19 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-10-18 22:04:20 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-18 22:04:20 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18 22:04:21 Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookFavorateQualifierImpl' defined in file [D:\intellij\books\target\classes\com\spring\mapper\qualifier\BookFavorateQualifierImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookFavorateService': Unsatisfied dependency expressed through field 'baseRepository'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.spring.base.BaseRepository<com.spring.entity.BookFavorate, java.lang.Long>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-10-18 22:04:21 Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18 22:04:21 HikariPool-1 - Shutdown initiated...
+2024-10-18 22:04:21 HikariPool-1 - Shutdown completed.
+2024-10-18 22:04:21 Stopping service [Tomcat]
+2024-10-18 22:04:21 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-10-18 22:04:21 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field baseRepository in com.spring.base.BaseService required a bean of type 'com.spring.base.BaseRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.spring.base.BaseRepository' in your configuration.
+
+2024-10-18 22:05:18 HV000001: Hibernate Validator 6.2.5.Final
+2024-10-18 22:05:18 Starting SpringDataJpaHrProjectApplication using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 42048 (D:\intellij\books\target\classes started by Ahmed.Elsheikh in D:\intellij\books)
+2024-10-18 22:05:18 Running with Spring Boot v2.7.8, Spring v5.3.25
+2024-10-18 22:05:18 The following 1 profile is active: "dev"
+2024-10-18 22:05:18 Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-18 22:05:18 For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-18 22:05:19 Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-18 22:05:19 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-18 22:05:19 Finished Spring Data repository scanning in 53 ms. Found 3 JPA repository interfaces.
+2024-10-18 22:05:20 Tomcat initialized with port(s): 1996 (http)
+2024-10-18 22:05:20 Initializing ProtocolHandler ["http-nio-1996"]
+2024-10-18 22:05:20 Starting service [Tomcat]
+2024-10-18 22:05:20 Starting Servlet engine: [Apache Tomcat/9.0.71]
+2024-10-18 22:05:20 Initializing Spring embedded WebApplicationContext
+2024-10-18 22:05:20 Root WebApplicationContext: initialization completed in 1765 ms
+2024-10-18 22:05:20 HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-18 22:05:20 HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-10-18 22:05:20 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-18 22:05:20 HikariPool-1 - Starting...
+2024-10-18 22:05:21 HikariPool-1 - Start completed.
+2024-10-18 22:05:21 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-10-18 22:05:22 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-18 22:05:22 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18 22:05:22 Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookFavorateQualifierImpl' defined in file [D:\intellij\books\target\classes\com\spring\mapper\qualifier\BookFavorateQualifierImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookFavorateService': Unsatisfied dependency expressed through field 'baseRepository'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.spring.base.BaseRepository<com.spring.entity.BookFavorate, java.lang.Long>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-10-18 22:05:22 Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18 22:05:22 HikariPool-1 - Shutdown initiated...
+2024-10-18 22:05:22 HikariPool-1 - Shutdown completed.
+2024-10-18 22:05:22 Stopping service [Tomcat]
+2024-10-18 22:05:22 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-10-18 22:05:22 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field baseRepository in com.spring.base.BaseService required a bean of type 'com.spring.base.BaseRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.spring.base.BaseRepository' in your configuration.
+
+2024-10-18 22:08:18 HV000001: Hibernate Validator 6.2.5.Final
+2024-10-18 22:08:18 Starting SpringDataJpaHrProjectApplication using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 83260 (D:\intellij\books\target\classes started by Ahmed.Elsheikh in D:\intellij\books)
+2024-10-18 22:08:18 Running with Spring Boot v2.7.8, Spring v5.3.25
+2024-10-18 22:08:18 The following 1 profile is active: "dev"
+2024-10-18 22:08:19 Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-18 22:08:19 For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-18 22:08:20 Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-18 22:08:20 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-18 22:08:20 Finished Spring Data repository scanning in 85 ms. Found 3 JPA repository interfaces.
+2024-10-18 22:08:22 Tomcat initialized with port(s): 1996 (http)
+2024-10-18 22:08:22 Initializing ProtocolHandler ["http-nio-1996"]
+2024-10-18 22:08:22 Starting service [Tomcat]
+2024-10-18 22:08:22 Starting Servlet engine: [Apache Tomcat/9.0.71]
+2024-10-18 22:08:22 Initializing Spring embedded WebApplicationContext
+2024-10-18 22:08:22 Root WebApplicationContext: initialization completed in 3679 ms
+2024-10-18 22:08:23 HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-18 22:08:23 HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-10-18 22:08:23 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-18 22:08:23 HikariPool-1 - Starting...
+2024-10-18 22:08:24 HikariPool-1 - Start completed.
+2024-10-18 22:08:24 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-10-18 22:08:25 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-18 22:08:25 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-18 22:08:26 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-18 22:08:27 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-18 22:08:27 25 mappings in 'requestMappingHandlerMapping'
+2024-10-18 22:08:27 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-10-18 22:08:27 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-18 22:08:28 LiveReload server is running on port 35729
+2024-10-18 22:08:28 Exposing 14 endpoint(s) beneath base path '/actuator'
+2024-10-18 22:08:28 Starting ProtocolHandler ["http-nio-1996"]
+2024-10-18 22:08:28 Tomcat started on port(s): 1996 (http) with context path ''
+2024-10-18 22:08:28 Started SpringDataJpaHrProjectApplication in 9.841 seconds (JVM running for 11.073)
+2024-10-18 22:08:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:08:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:28 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
+2024-10-18 22:08:29 ====> Method Name Is >> {}  List com.spring.repo.AuthorRepo.findAll()
+2024-10-18 22:08:29 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 874 ms.
+2024-10-18 22:08:29 ====> Method Name Is >> {}  List com.spring.repo.BookRepository.findAll()
+2024-10-18 22:08:30 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-18 22:08:30 Initializing Servlet 'dispatcherServlet'
+2024-10-18 22:08:30 Detected StandardServletMultipartResolver
+2024-10-18 22:08:30 Detected AcceptHeaderLocaleResolver
+2024-10-18 22:08:30 Detected FixedThemeResolver
+2024-10-18 22:08:30 Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2d5cdfe
+2024-10-18 22:08:30 Detected org.springframework.web.servlet.support.SessionFlashMapManager@17eb36e9
+2024-10-18 22:08:30 enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-10-18 22:08:30 Completed initialization in 2 ms
+2024-10-18 22:08:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:08:30 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 10 ms.
+2024-10-18 22:08:30 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 10 ms.
+2024-10-18 22:08:32 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:32 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:08:32 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:08:32 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 15 ms.
+2024-10-18 22:08:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:08:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 6 ms.
+2024-10-18 22:08:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 7 ms.
+2024-10-18 22:08:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:08:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:08:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:08:37 Compute Price: 2024-10-18T22:08:37.501
+2024-10-18 22:08:37 Compute Discount: 2024-10-18T22:08:37.501
+2024-10-18 22:08:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9177 ms.
+2024-10-18 22:08:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9180 ms.
+2024-10-18 22:08:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:08:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:08:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 6 ms.
+2024-10-18 22:08:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 7 ms.
+2024-10-18 22:08:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:08:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 6 ms.
+2024-10-18 22:08:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 6 ms.
+2024-10-18 22:08:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:08:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:08:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:08:46 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:46 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:08:46 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:08:46 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:08:47 Compute Discount: 2024-10-18T22:08:47.370
+2024-10-18 22:08:47 Compute Price: 2024-10-18T22:08:47.370
+2024-10-18 22:08:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9050 ms.
+2024-10-18 22:08:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9053 ms.
+2024-10-18 22:08:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:08:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:08:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:50 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:08:50 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:08:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:08:52 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:08:52 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:08:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:08:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:08:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:08:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:08:56 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:08:56 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:08:57 Compute Discount: 2024-10-18T22:08:57.356
+2024-10-18 22:08:57 Compute Price: 2024-10-18T22:08:57.356
+2024-10-18 22:08:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9028 ms.
+2024-10-18 22:08:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9031 ms.
+2024-10-18 22:08:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:08:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:00 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:00 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:00 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 6 ms.
+2024-10-18 22:09:00 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 6 ms.
+2024-10-18 22:09:02 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:02 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:02 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:09:02 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:09:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:04 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9 ms.
+2024-10-18 22:09:04 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9 ms.
+2024-10-18 22:09:06 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:06 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:06 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:09:06 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:09:07 Compute Discount: 2024-10-18T22:09:07.343
+2024-10-18 22:09:07 Compute Price: 2024-10-18T22:09:07.343
+2024-10-18 22:09:07 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9023 ms.
+2024-10-18 22:09:07 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9028 ms.
+2024-10-18 22:09:08 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:08 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:09:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:09:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:12 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:09:12 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:09:14 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:14 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:14 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 6 ms.
+2024-10-18 22:09:14 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 6 ms.
+2024-10-18 22:09:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:16 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:09:16 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:09:17 Compute Price: 2024-10-18T22:09:17.365
+2024-10-18 22:09:17 Compute Discount: 2024-10-18T22:09:17.365
+2024-10-18 22:09:17 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9032 ms.
+2024-10-18 22:09:17 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9035 ms.
+2024-10-18 22:09:18 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:18 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:09:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 13 ms.
+2024-10-18 22:09:22 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:22 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:22 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:09:22 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:09:24 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:24 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:24 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:09:24 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:09:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:26 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:09:26 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:09:27 Compute Price: 2024-10-18T22:09:27.358
+2024-10-18 22:09:27 Compute Discount: 2024-10-18T22:09:27.358
+2024-10-18 22:09:27 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9030 ms.
+2024-10-18 22:09:27 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9031 ms.
+2024-10-18 22:09:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:30 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 7 ms.
+2024-10-18 22:09:30 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 7 ms.
+2024-10-18 22:09:32 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:32 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:32 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 6 ms.
+2024-10-18 22:09:32 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 6 ms.
+2024-10-18 22:09:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:09:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:09:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:09:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:09:37 Compute Price: 2024-10-18T22:09:37.364
+2024-10-18 22:09:37 Compute Discount: 2024-10-18T22:09:37.364
+2024-10-18 22:09:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9033 ms.
+2024-10-18 22:09:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9035 ms.
+2024-10-18 22:09:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:09:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:09:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:09:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:09:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:09:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:09:46 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:46 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:46 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:09:46 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:09:47 Compute Price: 2024-10-18T22:09:47.376
+2024-10-18 22:09:47 Compute Discount: 2024-10-18T22:09:47.376
+2024-10-18 22:09:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9041 ms.
+2024-10-18 22:09:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9043 ms.
+2024-10-18 22:09:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:50 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 7 ms.
+2024-10-18 22:09:50 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 7 ms.
+2024-10-18 22:09:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:52 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:09:52 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:09:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:09:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:09:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:09:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:56 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:09:56 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:09:57 Compute Discount: 2024-10-18T22:09:57.362
+2024-10-18 22:09:57 Compute Price: 2024-10-18T22:09:57.362
+2024-10-18 22:09:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9031 ms.
+2024-10-18 22:09:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9032 ms.
+2024-10-18 22:09:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:09:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:00 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:00 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:00 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 6 ms.
+2024-10-18 22:10:00 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 7 ms.
+2024-10-18 22:10:02 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:02 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:02 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:02 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:04 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:10:04 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:10:06 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:06 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:06 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:06 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:07 Compute Price: 2024-10-18T22:10:07.374
+2024-10-18 22:10:07 Compute Discount: 2024-10-18T22:10:07.374
+2024-10-18 22:10:07 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9047 ms.
+2024-10-18 22:10:07 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9051 ms.
+2024-10-18 22:10:08 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:08 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:10:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:10:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:12 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:12 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:14 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:14 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:14 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:14 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:16 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:10:16 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:10:17 Compute Discount: 2024-10-18T22:10:17.352
+2024-10-18 22:10:17 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9022 ms.
+2024-10-18 22:10:17 Compute Price: 2024-10-18T22:10:17.367
+2024-10-18 22:10:17 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9036 ms.
+2024-10-18 22:10:18 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:18 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:10:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:10:22 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:22 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:22 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:22 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:24 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:24 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:24 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:10:24 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:10:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:26 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:26 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:10:27 Compute Discount: 2024-10-18T22:10:27.344
+2024-10-18 22:10:27 Compute Price: 2024-10-18T22:10:27.344
+2024-10-18 22:10:27 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9023 ms.
+2024-10-18 22:10:27 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9026 ms.
+2024-10-18 22:10:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:30 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:10:30 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:10:32 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:32 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:32 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:32 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-18 22:10:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-18 22:10:37 Compute Price: 2024-10-18T22:10:37.361
+2024-10-18 22:10:37 Compute Discount: 2024-10-18T22:10:37.361
+2024-10-18 22:10:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9044 ms.
+2024-10-18 22:10:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9046 ms.
+2024-10-18 22:10:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:10:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:10:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:10:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:10:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:10:46 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:46 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:46 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:10:46 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:10:47 Compute Price: 2024-10-18T22:10:47.364
+2024-10-18 22:10:47 Compute Discount: 2024-10-18T22:10:47.364
+2024-10-18 22:10:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9036 ms.
+2024-10-18 22:10:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9037 ms.
+2024-10-18 22:10:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:50 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:10:50 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:10:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:52 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:10:52 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:10:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:10:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:10:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:10:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:56 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:10:56 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:10:57 Compute Price: 2024-10-18T22:10:57.357
+2024-10-18 22:10:57 Compute Discount: 2024-10-18T22:10:57.357
+2024-10-18 22:10:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9022 ms.
+2024-10-18 22:10:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9040 ms.
+2024-10-18 22:10:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:10:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:00 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:00 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:00 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:00 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:02 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:02 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:02 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:02 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:04 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:04 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:06 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:06 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:06 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:06 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:07 Compute Price: 2024-10-18T22:11:07.345
+2024-10-18 22:11:07 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9019 ms.
+2024-10-18 22:11:07 Compute Discount: 2024-10-18T22:11:07.360
+2024-10-18 22:11:07 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9033 ms.
+2024-10-18 22:11:08 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:08 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:12 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 6 ms.
+2024-10-18 22:11:12 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 6 ms.
+2024-10-18 22:11:14 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:14 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:14 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:14 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:16 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:16 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:17 Compute Discount: 2024-10-18T22:11:17.360
+2024-10-18 22:11:17 Compute Price: 2024-10-18T22:11:17.360
+2024-10-18 22:11:17 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9029 ms.
+2024-10-18 22:11:17 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9031 ms.
+2024-10-18 22:11:18 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:18 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:22 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:22 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:22 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:22 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:24 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:24 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:24 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:24 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:26 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:26 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:27 Compute Discount: 2024-10-18T22:11:27.353
+2024-10-18 22:11:27 Compute Price: 2024-10-18T22:11:27.353
+2024-10-18 22:11:27 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9020 ms.
+2024-10-18 22:11:27 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9028 ms.
+2024-10-18 22:11:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:30 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:30 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:32 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:32 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:32 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:11:32 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:11:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:11:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:37 Compute Price: 2024-10-18T22:11:37.367
+2024-10-18 22:11:37 Compute Discount: 2024-10-18T22:11:37.367
+2024-10-18 22:11:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9040 ms.
+2024-10-18 22:11:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9054 ms.
+2024-10-18 22:11:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:46 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:46 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:46 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:46 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:47 Compute Price: 2024-10-18T22:11:47.342
+2024-10-18 22:11:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9020 ms.
+2024-10-18 22:11:47 Compute Discount: 2024-10-18T22:11:47.358
+2024-10-18 22:11:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9020 ms.
+2024-10-18 22:11:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:50 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:11:50 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:11:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:52 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:52 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:11:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:11:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:56 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:11:56 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:11:57 Compute Price: 2024-10-18T22:11:57.350
+2024-10-18 22:11:57 Compute Discount: 2024-10-18T22:11:57.350
+2024-10-18 22:11:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9023 ms.
+2024-10-18 22:11:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9026 ms.
+2024-10-18 22:11:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:11:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:00 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:00 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:00 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:12:00 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:12:02 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:02 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:02 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:02 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:04 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:12:04 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:12:06 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:06 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:06 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:06 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:07 Compute Price: 2024-10-18T22:12:07.342
+2024-10-18 22:12:07 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9018 ms.
+2024-10-18 22:12:07 Compute Discount: 2024-10-18T22:12:07.358
+2024-10-18 22:12:07 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9039 ms.
+2024-10-18 22:12:08 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:08 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:12 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:12 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:14 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:14 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:14 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:14 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:16 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:16 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:17 Compute Price: 2024-10-18T22:12:17.365
+2024-10-18 22:12:17 Compute Discount: 2024-10-18T22:12:17.365
+2024-10-18 22:12:17 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9038 ms.
+2024-10-18 22:12:17 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9046 ms.
+2024-10-18 22:12:18 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:18 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:22 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:22 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:22 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:22 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:24 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:24 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:24 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:24 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:26 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:26 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:27 Compute Discount: 2024-10-18T22:12:27.371
+2024-10-18 22:12:27 Compute Price: 2024-10-18T22:12:27.371
+2024-10-18 22:12:27 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9034 ms.
+2024-10-18 22:12:27 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9040 ms.
+2024-10-18 22:12:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:30 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:30 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:32 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:32 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:32 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:32 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:12:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:12:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:37 Compute Price: 2024-10-18T22:12:37.356
+2024-10-18 22:12:37 Compute Discount: 2024-10-18T22:12:37.356
+2024-10-18 22:12:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9040 ms.
+2024-10-18 22:12:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9049 ms.
+2024-10-18 22:12:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:46 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:46 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:46 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:46 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:47 Compute Price: 2024-10-18T22:12:47.347
+2024-10-18 22:12:47 Compute Discount: 2024-10-18T22:12:47.347
+2024-10-18 22:12:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9033 ms.
+2024-10-18 22:12:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9035 ms.
+2024-10-18 22:12:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:50 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:50 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:52 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:52 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:12:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:12:56 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:56 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:12:57 Compute Price: 2024-10-18T22:12:57.354
+2024-10-18 22:12:57 Compute Discount: 2024-10-18T22:12:57.354
+2024-10-18 22:12:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9033 ms.
+2024-10-18 22:12:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9035 ms.
+2024-10-18 22:12:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:12:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:00 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:00 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:00 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:00 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:13:02 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:02 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:02 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:02 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:04 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:04 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:06 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:06 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:06 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:13:06 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:13:07 Compute Discount: 2024-10-18T22:13:07.364
+2024-10-18 22:13:07 Compute Price: 2024-10-18T22:13:07.364
+2024-10-18 22:13:07 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9040 ms.
+2024-10-18 22:13:07 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9043 ms.
+2024-10-18 22:13:08 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:08 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:12 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:12 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:14 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:14 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:14 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-18 22:13:14 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-18 22:13:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:16 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:13:16 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:13:17 Compute Price: 2024-10-18T22:13:17.366
+2024-10-18 22:13:17 Compute Discount: 2024-10-18T22:13:17.366
+2024-10-18 22:13:17 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9040 ms.
+2024-10-18 22:13:17 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9042 ms.
+2024-10-18 22:13:18 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:18 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:22 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:22 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:22 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-18 22:13:22 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-18 22:13:24 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:24 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:24 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:24 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:26 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:26 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:27 Compute Discount: 2024-10-18T22:13:27.373
+2024-10-18 22:13:27 Compute Price: 2024-10-18T22:13:27.373
+2024-10-18 22:13:27 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9044 ms.
+2024-10-18 22:13:27 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9047 ms.
+2024-10-18 22:13:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:30 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:13:30 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:13:32 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:32 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:32 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:13:32 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:13:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:13:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:13:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:13:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:13:37 Compute Price: 2024-10-18T22:13:37.360
+2024-10-18 22:13:37 Compute Discount: 2024-10-18T22:13:37.360
+2024-10-18 22:13:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9029 ms.
+2024-10-18 22:13:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9032 ms.
+2024-10-18 22:13:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:13:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:13:46 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:46 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:46 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:13:46 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:47 Compute Discount: 2024-10-18T22:13:47.360
+2024-10-18 22:13:47 Compute Price: 2024-10-18T22:13:47.360
+2024-10-18 22:13:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9031 ms.
+2024-10-18 22:13:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9033 ms.
+2024-10-18 22:13:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:50 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:13:50 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:13:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:52 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:13:52 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:13:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:13:56 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:13:56 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:13:57 Compute Discount: 2024-10-18T22:13:57.379
+2024-10-18 22:13:57 Compute Price: 2024-10-18T22:13:57.379
+2024-10-18 22:13:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9045 ms.
+2024-10-18 22:13:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9047 ms.
+2024-10-18 22:13:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:13:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:00 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:00 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:00 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:00 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:02 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:02 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:02 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:14:02 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:04 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:04 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:14:06 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:06 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:06 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:14:06 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:14:07 Compute Price: 2024-10-18T22:14:07.355
+2024-10-18 22:14:07 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9024 ms.
+2024-10-18 22:14:07 Compute Discount: 2024-10-18T22:14:07.371
+2024-10-18 22:14:07 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9037 ms.
+2024-10-18 22:14:08 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:08 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-18 22:14:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:12 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-18 22:14:12 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-18 22:14:14 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:14 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:14 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:14 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:16 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:16 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:17 Compute Discount: 2024-10-18T22:14:17.350
+2024-10-18 22:14:17 Compute Price: 2024-10-18T22:14:17.350
+2024-10-18 22:14:17 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9026 ms.
+2024-10-18 22:14:17 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9028 ms.
+2024-10-18 22:14:18 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:18 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:14:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:14:22 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:22 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:22 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:22 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:24 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:24 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:24 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:24 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:26 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:26 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:27 Compute Discount: 2024-10-18T22:14:27.359
+2024-10-18 22:14:27 Compute Price: 2024-10-18T22:14:27.359
+2024-10-18 22:14:27 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9042 ms.
+2024-10-18 22:14:27 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9044 ms.
+2024-10-18 22:14:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:30 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-18 22:14:30 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-18 22:14:32 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:32 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:32 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:14:32 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:14:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:14:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:14:37 Compute Price: 2024-10-18T22:14:37.372
+2024-10-18 22:14:37 Compute Discount: 2024-10-18T22:14:37.372
+2024-10-18 22:14:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9048 ms.
+2024-10-18 22:14:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9050 ms.
+2024-10-18 22:14:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:40 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-18 22:14:40 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:14:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:14:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-18 22:14:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-18 22:14:46 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:46 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:46 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:46 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:47 Compute Discount: 2024-10-18T22:14:47.352
+2024-10-18 22:14:47 Compute Price: 2024-10-18T22:14:47.352
+2024-10-18 22:14:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9035 ms.
+2024-10-18 22:14:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9038 ms.
+2024-10-18 22:14:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:50 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:14:50 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:14:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:52 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-18 22:14:52 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-18 22:14:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-18 22:14:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-18 22:14:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:56 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:14:56 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:56 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:14:57 Compute Discount: 2024-10-18T22:14:57.351
+2024-10-18 22:14:57 Compute Price: 2024-10-18T22:14:57.367
+2024-10-18 22:14:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9040 ms.
+2024-10-18 22:14:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9043 ms.
+2024-10-18 22:14:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:14:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:15:00 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:15:00 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:15:00 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:15:00 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:15:02 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:15:02 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:15:02 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-18 22:15:02 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-18 22:15:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:15:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:15:04 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 1 ms.
+2024-10-18 22:15:04 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-18 22:15:06 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:15:06 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:15:06 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-18 22:15:06 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-18 22:15:07 Compute Price: 2024-10-18T22:15:07.361
+2024-10-18 22:15:07 Compute Discount: 2024-10-18T22:15:07.361
+2024-10-18 22:15:07 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9026 ms.
+2024-10-18 22:15:07 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9026 ms.
+2024-10-18 22:15:08 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:15:08 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:15:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:15:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:15:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-18 22:15:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:15:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:15:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:15:12 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-18 22:15:12 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-18 22:15:14 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:15:14 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:15:14 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-18 22:15:14 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-18 22:15:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-18 22:15:16 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-18 22:15:16 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-18 22:15:16 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-18 22:15:17 Compute Price: 2024-10-18T22:15:17.356
+2024-10-18 22:15:17 Compute Discount: 2024-10-18T22:15:17.356
+2024-10-18 22:15:17 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9027 ms.
+2024-10-18 22:15:17 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9030 ms.
