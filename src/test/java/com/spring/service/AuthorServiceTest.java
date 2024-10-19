@@ -4,20 +4,25 @@ import com.spring.entity.Author;
 import com.spring.repo.AuthorRepo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.Optional;
 
 @SpringBootTest
 public class AuthorServiceTest {
 
-    @MockBean
+//    @MockBean
+//    AuthorRepo authorRepo;
+//    @Autowired
+//    private AuthorService authorService;
+
+    @InjectMocks
+    AuthorService authorService;
+    @Mock
     AuthorRepo authorRepo;
-    @Autowired
-    private AuthorService authorService;
 
 
     @Test
