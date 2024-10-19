@@ -68,6 +68,14 @@ public class AuthorController {
         return ResponseEntity.ok(authorDTO);
     }
 
+    @GetMapping("/email/{email}")
+    public ResponseEntity<?> findByEmail(@PathVariable String email) {
+       Author author =  authorService.findByEmail(email).get();
+       AuthorDTO authorDTO = authorMapper.map(author);
+       return ResponseEntity.ok(authorDTO);
+
+    }
+
     @GetMapping("")
     @Operation(summary = "Find All Authors")
     public ResponseEntity<?> findAll() {
