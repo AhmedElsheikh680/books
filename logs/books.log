@@ -1,1025 +1,288 @@
-2024-10-19 01:08:23 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 01:08:23 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 96176 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 01:08:23 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 01:08:23 The following 1 profile is active: "prod"
-2024-10-19 01:08:23 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@54361a9
-2024-10-19 01:08:24 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 01:08:24 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 01:08:25 Finished Spring Data repository scanning in 220 ms. Found 3 JPA repository interfaces.
-2024-10-19 01:08:26 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 01:08:26 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 01:08:27 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 01:08:27 HikariPool-1 - Starting...
-2024-10-19 01:08:28 HikariPool-1 - Start completed.
-2024-10-19 01:08:28 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 01:08:29 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 01:08:29 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 01:08:31 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 01:08:31 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 01:08:31 25 mappings in 'requestMappingHandlerMapping'
-2024-10-19 01:08:32 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 01:08:32 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 01:08:33 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 01:08:33 Started SpringDataJpaHrProjectApplicationTests in 10.913 seconds (JVM running for 12.387)
-2024-10-19 01:08:33 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 01:08:33 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 01:08:33 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-19 01:08:34 ====> Method Name Is >> {}  List com.spring.repo.AuthorRepo.findAll()
-2024-10-19 01:08:34 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 1045 ms.
-2024-10-19 01:08:35 ====> Method Name Is >> {}  Optional com.spring.service.AuthorService.findByEmail(String)
-2024-10-19 01:08:35 ====> argument >> ahmed@Mohamed.com
-2024-10-19 01:08:35 ====> Method Name Is >> {}  Optional com.spring.repo.AuthorRepo.findByEmail(String)
-2024-10-19 01:08:35 ====> argument >> ahmed@Mohamed.com
-2024-10-19 01:08:35 KPI:[method-execution]	for: Optional com.spring.service.AuthorService.findByEmail(String)	withArgs: (ahmed@Mohamed.com)	took: 35 ms.
-2024-10-19 01:08:35 Closing org.springframework.web.context.support.GenericWebApplicationContext@54361a9, started on Sat Oct 19 01:08:23 EET 2024
-2024-10-19 01:08:35 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 01:08:35 HikariPool-1 - Shutdown initiated...
-2024-10-19 01:08:35 HikariPool-1 - Shutdown completed.
-2024-10-19 01:16:37 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 01:16:37 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 49708 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 01:16:37 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 01:16:37 The following 1 profile is active: "prod"
-2024-10-19 01:16:37 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@54361a9
-2024-10-19 01:16:39 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 01:16:39 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 01:16:39 Finished Spring Data repository scanning in 228 ms. Found 3 JPA repository interfaces.
-2024-10-19 01:16:41 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 01:16:41 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 01:16:41 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 01:16:41 HikariPool-1 - Starting...
-2024-10-19 01:16:42 HikariPool-1 - Start completed.
-2024-10-19 01:16:43 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 01:16:44 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 01:16:44 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 01:16:45 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 01:16:45 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 01:16:45 25 mappings in 'requestMappingHandlerMapping'
-2024-10-19 01:16:46 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 01:16:46 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 01:16:47 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 01:16:47 Started SpringDataJpaHrProjectApplicationTests in 10.385 seconds (JVM running for 11.809)
-2024-10-19 01:16:47 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 01:16:47 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 01:16:47 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-19 01:16:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 116 ms.
-2024-10-19 01:16:47 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 116 ms.
-2024-10-19 01:16:48 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 958 ms.
-2024-10-19 01:16:48 ====> Method Name Is >> {}  List com.spring.repo.BookRepository.findAll()
-2024-10-19 01:16:49 ====> Method Name Is >> {}  Optional com.spring.service.AuthorService.findByEmail(String)
-2024-10-19 01:16:49 ====> argument >> a@a.com
-2024-10-19 01:16:49 ====> Method Name Is >> {}  Optional com.spring.repo.AuthorRepo.findByEmail(String)
-2024-10-19 01:16:49 ====> argument >> a@a.com
-2024-10-19 01:16:49 KPI:[method-execution]	for: Optional com.spring.service.AuthorService.findByEmail(String)	withArgs: (a@a.com)	took: 41 ms.
-2024-10-19 01:16:49 Closing org.springframework.web.context.support.GenericWebApplicationContext@54361a9, started on Sat Oct 19 01:16:37 EET 2024
-2024-10-19 01:16:49 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 01:16:49 HikariPool-1 - Shutdown initiated...
-2024-10-19 01:16:49 HikariPool-1 - Shutdown completed.
-2024-10-19 10:27:02 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 10:27:02 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 17900 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 10:27:02 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 10:27:02 The following 1 profile is active: "prod"
-2024-10-19 10:27:02 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3bffddff
-2024-10-19 10:27:04 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 10:27:04 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 10:27:04 Finished Spring Data repository scanning in 289 ms. Found 3 JPA repository interfaces.
-2024-10-19 10:27:06 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 10:27:06 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 10:27:06 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 10:27:07 HikariPool-1 - Starting...
-2024-10-19 10:27:08 HikariPool-1 - Start completed.
-2024-10-19 10:27:08 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 10:27:09 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 10:27:09 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 10:27:10 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 10:27:11 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 10:27:11 25 mappings in 'requestMappingHandlerMapping'
-2024-10-19 10:27:12 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 10:27:12 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 10:27:13 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 10:27:13 Started SpringDataJpaHrProjectApplicationTests in 11.048 seconds (JVM running for 12.555)
-2024-10-19 10:27:13 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:27:13 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:27:13 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-19 10:27:14 ====> Method Name Is >> {}  List com.spring.repo.AuthorRepo.findAll()
-2024-10-19 10:27:14 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 1110 ms.
-2024-10-19 10:27:14 ====> Method Name Is >> {}  Optional com.spring.service.AuthorService.findByEmail(String)
-2024-10-19 10:27:14 ====> argument >> ahmed@Mohamed.com
-2024-10-19 10:27:14 ====> Method Name Is >> {}  Optional com.spring.repo.AuthorRepo.findByEmail(String)
-2024-10-19 10:27:14 ====> argument >> ahmed@Mohamed.com
-2024-10-19 10:27:14 KPI:[method-execution]	for: Optional com.spring.service.AuthorService.findByEmail(String)	withArgs: (ahmed@Mohamed.com)	took: 28 ms.
-2024-10-19 10:27:14 ====> Method Name Is >> {}  Optional com.spring.service.AuthorService.findByEmail(String)
-2024-10-19 10:27:14 ====> argument >> a@a.com
-2024-10-19 10:27:14 ====> Method Name Is >> {}  Optional com.spring.repo.AuthorRepo.findByEmail(String)
-2024-10-19 10:27:14 ====> argument >> a@a.com
-2024-10-19 10:27:14 KPI:[method-execution]	for: Optional com.spring.service.AuthorService.findByEmail(String)	withArgs: (a@a.com)	took: 4 ms.
-2024-10-19 10:27:14 Closing org.springframework.web.context.support.GenericWebApplicationContext@3bffddff, started on Sat Oct 19 10:27:02 EET 2024
-2024-10-19 10:27:14 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 10:27:14 HikariPool-1 - Shutdown initiated...
-2024-10-19 10:27:14 HikariPool-1 - Shutdown completed.
-2024-10-19 10:29:41 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 10:29:41 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 64268 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 10:29:41 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 10:29:41 The following 1 profile is active: "prod"
-2024-10-19 10:29:41 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1601e47
-2024-10-19 10:29:43 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 10:29:43 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 10:29:43 Finished Spring Data repository scanning in 184 ms. Found 3 JPA repository interfaces.
-2024-10-19 10:29:45 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 10:29:45 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 10:29:45 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 10:29:45 HikariPool-1 - Starting...
-2024-10-19 10:29:46 HikariPool-1 - Start completed.
-2024-10-19 10:29:46 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 10:29:47 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 10:29:47 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 10:29:48 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 10:29:48 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 10:29:49 25 mappings in 'requestMappingHandlerMapping'
-2024-10-19 10:29:49 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 10:29:49 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 10:29:50 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 10:29:50 Started SpringDataJpaHrProjectApplicationTests in 9.298 seconds (JVM running for 10.389)
-2024-10-19 10:29:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:29:50 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-19 10:29:50 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:29:51 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 117 ms.
-2024-10-19 10:29:51 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 120 ms.
-2024-10-19 10:29:51 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 964 ms.
-2024-10-19 10:29:52 ====> Method Name Is >> {}  Optional com.spring.service.AuthorService.findByEmail(String)
-2024-10-19 10:29:52 ====> argument >> ahmed@Mohamed.com
-2024-10-19 10:29:52 ====> Method Name Is >> {}  Optional com.spring.repo.AuthorRepo.findByEmail(String)
-2024-10-19 10:29:52 ====> argument >> ahmed@Mohamed.com
-2024-10-19 10:29:52 KPI:[method-execution]	for: Optional com.spring.service.AuthorService.findByEmail(String)	withArgs: (ahmed@Mohamed.com)	took: 49 ms.
-2024-10-19 10:29:52 ====> Method Name Is >> {}  Optional com.spring.service.AuthorService.findByEmail(String)
-2024-10-19 10:29:52 ====> argument >> a@a.com
-2024-10-19 10:29:52 ====> Method Name Is >> {}  Optional com.spring.repo.AuthorRepo.findByEmail(String)
-2024-10-19 10:29:52 ====> argument >> a@a.com
-2024-10-19 10:29:52 KPI:[method-execution]	for: Optional com.spring.service.AuthorService.findByEmail(String)	withArgs: (a@a.com)	took: 5 ms.
-2024-10-19 10:29:52 Closing org.springframework.web.context.support.GenericWebApplicationContext@1601e47, started on Sat Oct 19 10:29:41 EET 2024
-2024-10-19 10:29:52 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 10:29:52 HikariPool-1 - Shutdown initiated...
-2024-10-19 10:29:52 HikariPool-1 - Shutdown completed.
-2024-10-19 10:42:02 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 10:42:02 Starting SpringDataJpaHrProjectApplicationTests using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 34612 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 10:42:02 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 10:42:02 The following 1 profile is active: "prod"
-2024-10-19 10:42:02 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3bffddff
-2024-10-19 10:42:03 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 10:42:03 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 10:42:04 Finished Spring Data repository scanning in 227 ms. Found 3 JPA repository interfaces.
-2024-10-19 10:42:05 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 10:42:05 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 10:42:05 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 10:42:06 HikariPool-1 - Starting...
-2024-10-19 10:42:07 HikariPool-1 - Start completed.
-2024-10-19 10:42:07 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 10:42:08 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 10:42:08 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 10:42:09 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 10:42:09 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 10:42:09 25 mappings in 'requestMappingHandlerMapping'
-2024-10-19 10:42:10 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 10:42:10 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 10:42:12 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 10:42:12 Started SpringDataJpaHrProjectApplicationTests in 10.542 seconds (JVM running for 11.648)
-2024-10-19 10:42:12 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-19 10:42:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:12 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:13 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 1182 ms.
-2024-10-19 10:42:13 ====> Method Name Is >> {}  List com.spring.repo.BookRepository.findAll()
-2024-10-19 10:42:14 ====> Method Name Is >> {}  Optional com.spring.service.AuthorService.findByEmail(String)
-2024-10-19 10:42:14 ====> argument >> ahmed@Mohamed.com
-2024-10-19 10:42:14 ====> Method Name Is >> {}  Optional com.spring.repo.AuthorRepo.findByEmail(String)
-2024-10-19 10:42:14 ====> argument >> ahmed@Mohamed.com
-2024-10-19 10:42:14 KPI:[method-execution]	for: Optional com.spring.service.AuthorService.findByEmail(String)	withArgs: (ahmed@Mohamed.com)	took: 42 ms.
-2024-10-19 10:42:14 ====> Method Name Is >> {}  Optional com.spring.service.AuthorService.findByEmail(String)
-2024-10-19 10:42:14 ====> argument >> a@a.com
-2024-10-19 10:42:14 ====> Method Name Is >> {}  Optional com.spring.repo.AuthorRepo.findByEmail(String)
-2024-10-19 10:42:14 ====> argument >> a@a.com
-2024-10-19 10:42:14 KPI:[method-execution]	for: Optional com.spring.service.AuthorService.findByEmail(String)	withArgs: (a@a.com)	took: 4 ms.
-2024-10-19 10:42:14 Closing org.springframework.web.context.support.GenericWebApplicationContext@3bffddff, started on Sat Oct 19 10:42:02 EET 2024
-2024-10-19 10:42:14 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 10:42:14 HikariPool-1 - Shutdown initiated...
-2024-10-19 10:42:14 HikariPool-1 - Shutdown completed.
-2024-10-19 10:42:20 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 10:42:20 Starting SpringDataJpaHrProjectApplication using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 88872 (D:\intellij\books\target\classes started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 10:42:20 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 10:42:20 The following 1 profile is active: "prod"
-2024-10-19 10:42:20 Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-10-19 10:42:20 For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-10-19 10:42:20 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 10:42:20 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 10:42:20 Finished Spring Data repository scanning in 42 ms. Found 3 JPA repository interfaces.
-2024-10-19 10:42:21 Tomcat initialized with port(s): 1996 (http)
-2024-10-19 10:42:21 Initializing ProtocolHandler ["http-nio-1996"]
-2024-10-19 10:42:21 Starting service [Tomcat]
-2024-10-19 10:42:21 Starting Servlet engine: [Apache Tomcat/9.0.71]
-2024-10-19 10:42:21 Initializing Spring embedded WebApplicationContext
-2024-10-19 10:42:21 Root WebApplicationContext: initialization completed in 1484 ms
-2024-10-19 10:42:21 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 10:42:21 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 10:42:22 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 10:42:22 HikariPool-1 - Starting...
-2024-10-19 10:42:22 HikariPool-1 - Start completed.
-2024-10-19 10:42:22 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 10:42:23 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 10:42:23 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 10:42:23 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 10:42:23 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 10:42:24 25 mappings in 'requestMappingHandlerMapping'
-2024-10-19 10:42:24 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 10:42:24 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 10:42:24 LiveReload server is running on port 35729
-2024-10-19 10:42:24 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 10:42:24 Starting ProtocolHandler ["http-nio-1996"]
-2024-10-19 10:42:24 Tomcat started on port(s): 1996 (http) with context path ''
-2024-10-19 10:42:24 Started SpringDataJpaHrProjectApplication in 5.248 seconds (JVM running for 6.321)
-2024-10-19 10:42:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:25 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-19 10:42:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 72 ms.
-2024-10-19 10:42:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 72 ms.
-2024-10-19 10:42:25 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 566 ms.
-2024-10-19 10:42:26 Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-19 10:42:26 Initializing Servlet 'dispatcherServlet'
-2024-10-19 10:42:26 Detected StandardServletMultipartResolver
-2024-10-19 10:42:26 Detected AcceptHeaderLocaleResolver
-2024-10-19 10:42:26 Detected FixedThemeResolver
-2024-10-19 10:42:26 Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@51936c1
-2024-10-19 10:42:26 Detected org.springframework.web.servlet.support.SessionFlashMapManager@858d293
-2024-10-19 10:42:26 enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2024-10-19 10:42:26 Completed initialization in 3 ms
-2024-10-19 10:42:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:26 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:27 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 6 ms.
-2024-10-19 10:42:27 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 6 ms.
-2024-10-19 10:42:29 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:29 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:29 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
-2024-10-19 10:42:29 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
-2024-10-19 10:42:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:30 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:31 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
-2024-10-19 10:42:31 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
-2024-10-19 10:42:33 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:33 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:33 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 7 ms.
-2024-10-19 10:42:33 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 7 ms.
-2024-10-19 10:42:35 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:35 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:35 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
-2024-10-19 10:42:35 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
-2024-10-19 10:42:37 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:37 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
-2024-10-19 10:42:37 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
-2024-10-19 10:42:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:38 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:38 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 10:42:38 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 10:42:41 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:41 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:41 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
-2024-10-19 10:42:41 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
-2024-10-19 10:42:43 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:43 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:43 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
-2024-10-19 10:42:43 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
-2024-10-19 10:42:45 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:45 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:45 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
-2024-10-19 10:42:45 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
-2024-10-19 10:42:45 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 10:42:45 HikariPool-1 - Shutdown initiated...
-2024-10-19 10:42:45 HikariPool-1 - Shutdown completed.
-2024-10-19 10:42:48 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 10:42:48 Starting SpringDataJpaHrProjectApplication using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 42452 (D:\intellij\books\target\classes started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 10:42:48 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 10:42:48 The following 1 profile is active: "dev"
-2024-10-19 10:42:48 Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-10-19 10:42:48 For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-10-19 10:42:49 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 10:42:49 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 10:42:49 Finished Spring Data repository scanning in 42 ms. Found 3 JPA repository interfaces.
-2024-10-19 10:42:50 Tomcat initialized with port(s): 1996 (http)
-2024-10-19 10:42:50 Initializing ProtocolHandler ["http-nio-1996"]
-2024-10-19 10:42:50 Starting service [Tomcat]
-2024-10-19 10:42:50 Starting Servlet engine: [Apache Tomcat/9.0.71]
-2024-10-19 10:42:50 Initializing Spring embedded WebApplicationContext
-2024-10-19 10:42:50 Root WebApplicationContext: initialization completed in 1473 ms
-2024-10-19 10:42:50 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 10:42:50 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 10:42:50 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 10:42:50 HikariPool-1 - Starting...
-2024-10-19 10:42:51 HikariPool-1 - Start completed.
-2024-10-19 10:42:51 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 10:42:51 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 10:42:51 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 10:42:52 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 10:42:52 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 10:42:52 25 mappings in 'requestMappingHandlerMapping'
-2024-10-19 10:42:53 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 10:42:53 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 10:42:53 LiveReload server is running on port 35729
-2024-10-19 10:42:53 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 10:42:53 Starting ProtocolHandler ["http-nio-1996"]
-2024-10-19 10:42:53 Tomcat started on port(s): 1996 (http) with context path ''
-2024-10-19 10:42:53 Started SpringDataJpaHrProjectApplication in 5.222 seconds (JVM running for 6.298)
-2024-10-19 10:42:53 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:53 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:53 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-19 10:42:53 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 69 ms.
-2024-10-19 10:42:53 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 69 ms.
-2024-10-19 10:42:54 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 559 ms.
-2024-10-19 10:42:54 ====> Method Name Is >> {}  List com.spring.repo.BookRepository.findAll()
-2024-10-19 10:42:54 Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-19 10:42:54 Initializing Servlet 'dispatcherServlet'
-2024-10-19 10:42:54 Detected StandardServletMultipartResolver
-2024-10-19 10:42:54 Detected AcceptHeaderLocaleResolver
-2024-10-19 10:42:54 Detected FixedThemeResolver
-2024-10-19 10:42:54 Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@59e5da78
-2024-10-19 10:42:54 Detected org.springframework.web.servlet.support.SessionFlashMapManager@62c6d5f6
-2024-10-19 10:42:54 enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2024-10-19 10:42:54 Completed initialization in 2 ms
-2024-10-19 10:42:55 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:55 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:55 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
-2024-10-19 10:42:55 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
-2024-10-19 10:42:57 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:57 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
-2024-10-19 10:42:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
-2024-10-19 10:42:59 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:42:59 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:42:59 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 6 ms.
-2024-10-19 10:42:59 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 6 ms.
-2024-10-19 10:43:01 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 10:43:01 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 10:43:01 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 10:43:01 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 10:43:02 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 10:43:02 HikariPool-1 - Shutdown initiated...
-2024-10-19 10:43:02 HikariPool-1 - Shutdown completed.
-2024-10-19 13:26:09 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 13:26:09 Starting AuthorRepoTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 9688 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 13:26:09 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 13:26:09 The following 1 profile is active: "prod"
-2024-10-19 13:26:09 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6bab2585
-2024-10-19 13:26:11 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 13:26:11 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 13:26:11 Finished Spring Data repository scanning in 207 ms. Found 3 JPA repository interfaces.
-2024-10-19 13:26:12 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 13:26:12 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 13:26:13 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 13:26:13 HikariPool-1 - Starting...
-2024-10-19 13:26:14 HikariPool-1 - Start completed.
-2024-10-19 13:26:14 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 13:26:15 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 13:26:15 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 13:26:17 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 13:26:17 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 13:26:17 25 mappings in 'requestMappingHandlerMapping'
-2024-10-19 13:26:18 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 13:26:18 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 13:26:19 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 13:26:19 Started AuthorRepoTest in 10.241 seconds (JVM running for 11.723)
-2024-10-19 13:26:19 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:26:19 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:26:19 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-19 13:26:19 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 109 ms.
-2024-10-19 13:26:19 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 109 ms.
-2024-10-19 13:26:20 ====> Method Name Is >> {}  List com.spring.repo.AuthorRepo.findAll()
-2024-10-19 13:26:20 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 1098 ms.
-2024-10-19 13:26:20 ====> Method Name Is >> {}  Optional com.spring.repo.AuthorRepo.findByEmail(String)
-2024-10-19 13:26:20 ====> argument >> ahmed@mohamed.com
-2024-10-19 13:26:20 Closing org.springframework.web.context.support.GenericWebApplicationContext@6bab2585, started on Sat Oct 19 13:26:09 EET 2024
-2024-10-19 13:26:20 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 13:26:21 HikariPool-1 - Shutdown initiated...
-2024-10-19 13:26:21 HikariPool-1 - Shutdown completed.
-2024-10-19 13:38:04 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 13:38:04 Starting AuthorServiceTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 23524 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 13:38:04 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 13:38:04 The following 1 profile is active: "prod"
-2024-10-19 13:38:04 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@29cfd92b
-2024-10-19 13:38:06 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 13:38:06 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 13:38:06 Finished Spring Data repository scanning in 164 ms. Found 3 JPA repository interfaces.
-2024-10-19 13:38:07 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 13:38:07 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 13:38:07 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 13:38:08 HikariPool-1 - Starting...
-2024-10-19 13:38:09 HikariPool-1 - Start completed.
-2024-10-19 13:38:09 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 13:38:09 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 13:38:09 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 13:38:11 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 13:38:11 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 13:38:11 25 mappings in 'requestMappingHandlerMapping'
-2024-10-19 13:38:12 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 13:38:12 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 13:38:13 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 13:38:13 Started AuthorServiceTest in 9.045 seconds (JVM running for 10.366)
-2024-10-19 13:38:13 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:38:13 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:38:13 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-19 13:38:14 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 824 ms.
-2024-10-19 13:38:14 ====> Method Name Is >> {}  Optional com.spring.service.AuthorService.findByEmail(String)
-2024-10-19 13:38:14 ====> argument >> ahmed@mohamed.com
-2024-10-19 13:38:14 ====> Method Name Is >> {}  Optional com.spring.repo.AuthorRepo.findByEmail(String)
-2024-10-19 13:38:14 ====> argument >> ahmed@mohamed.com
-2024-10-19 13:38:14 KPI:[method-execution]	for: Optional com.spring.service.AuthorService.findByEmail(String)	withArgs: (ahmed@mohamed.com)	took: 42 ms.
-2024-10-19 13:38:14 Closing org.springframework.web.context.support.GenericWebApplicationContext@29cfd92b, started on Sat Oct 19 13:38:04 EET 2024
-2024-10-19 13:38:14 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 13:38:14 HikariPool-1 - Shutdown initiated...
-2024-10-19 13:38:14 HikariPool-1 - Shutdown completed.
-2024-10-19 13:54:43 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 13:54:43 Starting AuthorServiceTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 37520 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 13:54:43 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 13:54:43 The following 1 profile is active: "prod"
-2024-10-19 13:54:43 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@32fe9d0a
-2024-10-19 13:54:44 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 13:54:44 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 13:54:45 Finished Spring Data repository scanning in 234 ms. Found 3 JPA repository interfaces.
-2024-10-19 13:54:47 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 13:54:47 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 13:54:47 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 13:54:48 HikariPool-1 - Starting...
-2024-10-19 13:54:48 HikariPool-1 - Start completed.
-2024-10-19 13:54:48 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 13:54:49 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 13:54:49 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 13:54:51 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 13:54:51 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 13:54:51 25 mappings in 'requestMappingHandlerMapping'
-2024-10-19 13:54:52 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 13:54:52 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 13:54:53 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 13:54:53 Started AuthorServiceTest in 10.417 seconds (JVM running for 11.924)
-2024-10-19 13:54:53 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:54:53 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:54:53 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-19 13:54:54 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 882 ms.
-2024-10-19 13:54:54 ====> Method Name Is >> {}  List com.spring.repo.BookRepository.findAll()
-2024-10-19 13:54:54 ====> Method Name Is >> {}  Optional com.spring.service.AuthorService.findByEmail(String)
-2024-10-19 13:54:54 ====> argument >> ahmed@mohamed.com
-2024-10-19 13:54:54 KPI:[method-execution]	for: Optional com.spring.service.AuthorService.findByEmail(String)	withArgs: (ahmed@mohamed.com)	took: 11 ms.
-2024-10-19 13:54:54 Closing org.springframework.web.context.support.GenericWebApplicationContext@32fe9d0a, started on Sat Oct 19 13:54:43 EET 2024
-2024-10-19 13:54:54 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 13:54:54 HikariPool-1 - Shutdown initiated...
-2024-10-19 13:54:55 HikariPool-1 - Shutdown completed.
-2024-10-19 13:55:40 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 13:55:40 Starting AuthorServiceTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 9612 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 13:55:40 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 13:55:40 The following 1 profile is active: "prod"
-2024-10-19 13:55:40 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@32fe9d0a
-2024-10-19 13:55:41 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 13:55:41 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 13:55:42 Finished Spring Data repository scanning in 177 ms. Found 3 JPA repository interfaces.
-2024-10-19 13:55:43 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 13:55:44 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 13:55:44 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 13:55:44 HikariPool-1 - Starting...
-2024-10-19 13:55:45 HikariPool-1 - Start completed.
-2024-10-19 13:55:45 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 13:55:46 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 13:55:46 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 13:55:47 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 13:55:47 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 13:55:47 25 mappings in 'requestMappingHandlerMapping'
-2024-10-19 13:55:48 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 13:55:48 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 13:55:49 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 13:55:49 Started AuthorServiceTest in 9.286 seconds (JVM running for 10.621)
-2024-10-19 13:55:49 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:55:49 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:55:49 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-19 13:55:49 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 89 ms.
-2024-10-19 13:55:49 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 89 ms.
-2024-10-19 13:55:50 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 879 ms.
-2024-10-19 13:55:50 ====> Method Name Is >> {}  Optional com.spring.service.AuthorService.findByEmail(String)
-2024-10-19 13:55:50 ====> argument >> ahmed@mohamed.com
-2024-10-19 13:55:51 KPI:[method-execution]	for: Optional com.spring.service.AuthorService.findByEmail(String)	withArgs: (ahmed@mohamed.com)	took: 166 ms.
-2024-10-19 13:55:51 Closing org.springframework.web.context.support.GenericWebApplicationContext@32fe9d0a, started on Sat Oct 19 13:55:40 EET 2024
-2024-10-19 13:55:51 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 13:55:51 HikariPool-1 - Shutdown initiated...
-2024-10-19 13:55:51 HikariPool-1 - Shutdown completed.
-2024-10-19 13:56:11 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 13:56:11 Starting AuthorServiceTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 87080 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 13:56:11 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 13:56:11 The following 1 profile is active: "prod"
-2024-10-19 13:56:11 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@86733
-2024-10-19 13:56:13 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 13:56:13 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 13:56:13 Finished Spring Data repository scanning in 172 ms. Found 3 JPA repository interfaces.
-2024-10-19 13:56:15 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 13:56:15 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 13:56:15 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 13:56:16 HikariPool-1 - Starting...
-2024-10-19 13:56:17 HikariPool-1 - Start completed.
-2024-10-19 13:56:17 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 13:56:17 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 13:56:17 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 13:56:19 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 13:56:19 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 13:56:20 25 mappings in 'requestMappingHandlerMapping'
-2024-10-19 13:56:20 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 13:56:20 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 13:56:22 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 13:56:22 Started AuthorServiceTest in 10.76 seconds (JVM running for 12.592)
-2024-10-19 13:56:22 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:56:22 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:56:22 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-19 13:56:22 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 107 ms.
-2024-10-19 13:56:22 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 107 ms.
-2024-10-19 13:56:23 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 924 ms.
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 12 ms.
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 13 ms.
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 18 ms.
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 18 ms.
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 6 ms.
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 13:56:39 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:56:39 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
-2024-10-19 13:56:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:56:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:56:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:56:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:56:48 ====> Method Name Is >> {}  Optional com.spring.service.AuthorService.findByEmail(String)
-2024-10-19 13:56:48 ====> argument >> ahmed@mohamed.com
-2024-10-19 13:56:48 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
-2024-10-19 13:56:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:56:48 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
-2024-10-19 13:56:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:56:48 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 11 ms.
-2024-10-19 13:56:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:56:48 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 11 ms.
-2024-10-19 13:56:48 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 15 ms.
-2024-10-19 13:56:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:56:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:56:48 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 15 ms.
-2024-10-19 13:56:48 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:56:48 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 13:56:48 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:56:48 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 13:56:48 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:56:48 KPI:[method-execution]	for: Optional com.spring.service.AuthorService.findByEmail(String)	withArgs: (ahmed@mohamed.com)	took: 70 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 7 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 7 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 6 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 6 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 1 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 1 ms.
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 13:57:25 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
-2024-10-19 13:57:25 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
-2024-10-19 13:57:25 Closing org.springframework.web.context.support.GenericWebApplicationContext@86733, started on Sat Oct 19 13:56:11 EET 2024
-2024-10-19 13:57:25 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 13:57:25 HikariPool-1 - Shutdown initiated...
-2024-10-19 13:57:25 HikariPool-1 - Shutdown completed.
-2024-10-19 15:04:46 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 15:04:46 Starting AuthorControllerTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 19084 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 15:04:46 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 15:04:46 The following 1 profile is active: "prod"
-2024-10-19 15:04:47 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 15:04:47 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 15:04:48 Finished Spring Data repository scanning in 319 ms. Found 3 JPA repository interfaces.
-2024-10-19 15:04:50 Tomcat initialized with port(s): 0 (http)
-2024-10-19 15:04:50 Initializing ProtocolHandler ["http-nio-auto-1"]
-2024-10-19 15:04:50 Starting service [Tomcat]
-2024-10-19 15:04:50 Starting Servlet engine: [Apache Tomcat/9.0.71]
-2024-10-19 15:04:50 Initializing Spring embedded WebApplicationContext
-2024-10-19 15:04:50 Root WebApplicationContext: initialization completed in 4281 ms
-2024-10-19 15:04:51 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 15:04:51 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 15:04:52 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 15:04:52 HikariPool-1 - Starting...
-2024-10-19 15:04:53 HikariPool-1 - Start completed.
-2024-10-19 15:04:53 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 15:04:54 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 15:04:54 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 15:04:55 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 15:04:55 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 15:04:56 26 mappings in 'requestMappingHandlerMapping'
-2024-10-19 15:04:56 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 15:04:56 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 15:04:57 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 15:04:58 Starting ProtocolHandler ["http-nio-auto-1"]
-2024-10-19 15:04:58 Tomcat started on port(s): 8715 (http) with context path ''
-2024-10-19 15:04:58 Started AuthorControllerTest in 12.31 seconds (JVM running for 14.064)
-2024-10-19 15:04:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 15:04:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 15:04:58 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 15:04:58 HikariPool-1 - Shutdown initiated...
-2024-10-19 15:04:58 HikariPool-1 - Shutdown completed.
-2024-10-19 15:05:39 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 15:05:39 Starting AuthorControllerTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 94724 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 15:05:39 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 15:05:39 The following 1 profile is active: "prod"
-2024-10-19 15:05:40 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 15:05:40 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 15:05:40 Finished Spring Data repository scanning in 193 ms. Found 3 JPA repository interfaces.
-2024-10-19 15:05:42 Tomcat initialized with port(s): 0 (http)
-2024-10-19 15:05:42 Initializing ProtocolHandler ["http-nio-auto-1"]
-2024-10-19 15:05:42 Starting service [Tomcat]
-2024-10-19 15:05:42 Starting Servlet engine: [Apache Tomcat/9.0.71]
-2024-10-19 15:05:42 Initializing Spring embedded WebApplicationContext
-2024-10-19 15:05:42 Root WebApplicationContext: initialization completed in 3536 ms
-2024-10-19 15:05:43 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 15:05:43 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 15:05:43 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 15:05:43 HikariPool-1 - Starting...
-2024-10-19 15:05:44 HikariPool-1 - Start completed.
-2024-10-19 15:05:44 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 15:05:45 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 15:05:45 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 15:05:46 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 15:05:46 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 15:05:46 26 mappings in 'requestMappingHandlerMapping'
-2024-10-19 15:05:47 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 15:05:47 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 15:05:48 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 15:05:48 Starting ProtocolHandler ["http-nio-auto-1"]
-2024-10-19 15:05:48 Tomcat started on port(s): 8753 (http) with context path ''
-2024-10-19 15:05:49 Started AuthorControllerTest in 10.286 seconds (JVM running for 11.684)
-2024-10-19 15:05:49 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 15:05:49 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 15:05:49 ====> Method Name Is >> {}  List com.spring.repo.BookRepository.findAll()
-2024-10-19 15:05:49 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 117 ms.
-2024-10-19 15:05:49 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 117 ms.
-2024-10-19 15:05:49 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 15:05:49 HikariPool-1 - Shutdown initiated...
-2024-10-19 15:05:49 HikariPool-1 - Shutdown completed.
-2024-10-19 15:08:32 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 15:08:32 Starting AuthorControllerTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 18332 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 15:08:32 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 15:08:32 The following 1 profile is active: "prod"
-2024-10-19 15:08:33 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 15:08:33 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 15:08:33 Finished Spring Data repository scanning in 179 ms. Found 3 JPA repository interfaces.
-2024-10-19 15:08:35 Tomcat initialized with port(s): 0 (http)
-2024-10-19 15:08:35 Initializing ProtocolHandler ["http-nio-auto-1"]
-2024-10-19 15:08:35 Starting service [Tomcat]
-2024-10-19 15:08:35 Starting Servlet engine: [Apache Tomcat/9.0.71]
-2024-10-19 15:08:35 Initializing Spring embedded WebApplicationContext
-2024-10-19 15:08:35 Root WebApplicationContext: initialization completed in 3481 ms
-2024-10-19 15:08:36 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 15:08:37 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 15:08:37 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 15:08:37 HikariPool-1 - Starting...
-2024-10-19 15:08:37 HikariPool-1 - Start completed.
-2024-10-19 15:08:37 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 15:08:38 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 15:08:38 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 15:08:39 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 15:08:40 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 15:08:40 26 mappings in 'requestMappingHandlerMapping'
-2024-10-19 15:08:41 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 15:08:41 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 15:08:42 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 15:08:42 Starting ProtocolHandler ["http-nio-auto-1"]
-2024-10-19 15:08:42 Tomcat started on port(s): 8855 (http) with context path ''
-2024-10-19 15:08:42 Started AuthorControllerTest in 10.495 seconds (JVM running for 11.981)
-2024-10-19 15:08:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 15:08:42 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 15:08:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 111 ms.
-2024-10-19 15:08:42 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 111 ms.
-2024-10-19 15:08:42 HTTP GET http://localhost:8080/author/email/a@a.com
-2024-10-19 15:08:42 Accept=[application/json, application/cbor, application/*+json]
-2024-10-19 15:08:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 15:08:44 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 15:08:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
-2024-10-19 15:08:44 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
-2024-10-19 15:08:45 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 15:08:45 HikariPool-1 - Shutdown initiated...
-2024-10-19 15:08:45 HikariPool-1 - Shutdown completed.
-2024-10-19 15:10:24 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 15:10:24 Starting AuthorControllerTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 86656 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 15:10:24 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 15:10:24 The following 1 profile is active: "prod"
-2024-10-19 15:10:25 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 15:10:25 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 15:10:25 Finished Spring Data repository scanning in 184 ms. Found 3 JPA repository interfaces.
-2024-10-19 15:10:27 Tomcat initialized with port(s): 0 (http)
-2024-10-19 15:10:27 Initializing ProtocolHandler ["http-nio-auto-1"]
-2024-10-19 15:10:27 Starting service [Tomcat]
-2024-10-19 15:10:27 Starting Servlet engine: [Apache Tomcat/9.0.71]
-2024-10-19 15:10:27 Initializing Spring embedded WebApplicationContext
-2024-10-19 15:10:27 Root WebApplicationContext: initialization completed in 3515 ms
-2024-10-19 15:10:29 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 15:10:29 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 15:10:29 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 15:10:29 HikariPool-1 - Starting...
-2024-10-19 15:10:30 HikariPool-1 - Start completed.
-2024-10-19 15:10:30 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 15:10:30 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 15:10:30 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 15:10:32 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 15:10:32 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 15:10:32 26 mappings in 'requestMappingHandlerMapping'
-2024-10-19 15:10:33 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 15:10:33 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 15:10:34 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 15:10:34 Starting ProtocolHandler ["http-nio-auto-1"]
-2024-10-19 15:10:34 Tomcat started on port(s): 8922 (http) with context path ''
-2024-10-19 15:10:34 Started AuthorControllerTest in 10.733 seconds (JVM running for 12.273)
-2024-10-19 15:10:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 15:10:34 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 15:10:34 ====> Method Name Is >> {}  List com.spring.repo.BookRepository.findAll()
-2024-10-19 15:10:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 131 ms.
-2024-10-19 15:10:34 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 131 ms.
-2024-10-19 15:10:34 HTTP GET http://localhost:1996/author/email/a@a.com
-2024-10-19 15:10:34 Accept=[application/json, application/cbor, application/*+json]
-2024-10-19 15:10:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 15:10:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 15:10:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
-2024-10-19 15:10:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
-2024-10-19 15:10:37 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 15:10:37 HikariPool-1 - Shutdown initiated...
-2024-10-19 15:10:37 HikariPool-1 - Shutdown completed.
-2024-10-19 15:29:41 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 15:29:41 Starting AuthorServiceTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 82388 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 15:29:41 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 15:29:41 The following 1 profile is active: "prod"
-2024-10-19 15:29:41 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4a9cc6cb
-2024-10-19 15:29:43 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 15:29:43 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 15:29:43 Finished Spring Data repository scanning in 247 ms. Found 3 JPA repository interfaces.
-2024-10-19 15:29:45 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 15:29:45 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 15:29:45 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 15:29:45 HikariPool-1 - Starting...
-2024-10-19 15:29:47 HikariPool-1 - Start completed.
-2024-10-19 15:29:47 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 15:29:48 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 15:29:48 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 15:29:49 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 15:29:50 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 15:29:50 26 mappings in 'requestMappingHandlerMapping'
-2024-10-19 15:29:51 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 15:29:51 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 15:29:52 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 15:29:52 Started AuthorServiceTest in 11.229 seconds (JVM running for 12.768)
-2024-10-19 15:29:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 15:29:52 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 15:29:52 ====> Method Name Is >> {}  List com.spring.service.AuthorService.findAll()
-2024-10-19 15:29:53 ====> Method Name Is >> {}  List com.spring.repo.AuthorRepo.findAll()
-2024-10-19 15:29:53 KPI:[method-execution]	for: List com.spring.service.AuthorService.findAll()	withArgs: ()	took: 1086 ms.
-2024-10-19 15:29:53 ====> Method Name Is >> {}  List com.spring.repo.BookRepository.findAll()
-2024-10-19 15:29:54 Closing org.springframework.web.context.support.GenericWebApplicationContext@4a9cc6cb, started on Sat Oct 19 15:29:41 EET 2024
-2024-10-19 15:29:54 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 15:29:54 HikariPool-1 - Shutdown initiated...
-2024-10-19 15:29:54 HikariPool-1 - Shutdown completed.
-2024-10-19 15:46:09 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 15:46:10 Starting AuthorControllerTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 83456 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 15:46:10 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 15:46:10 The following 1 profile is active: "prod"
-2024-10-19 15:46:11 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 15:46:11 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 15:46:11 Finished Spring Data repository scanning in 235 ms. Found 3 JPA repository interfaces.
-2024-10-19 15:46:13 Tomcat initialized with port(s): 0 (http)
-2024-10-19 15:46:13 Initializing ProtocolHandler ["http-nio-auto-1"]
-2024-10-19 15:46:13 Starting service [Tomcat]
-2024-10-19 15:46:13 Starting Servlet engine: [Apache Tomcat/9.0.71]
-2024-10-19 15:46:14 Initializing Spring embedded WebApplicationContext
-2024-10-19 15:46:14 Root WebApplicationContext: initialization completed in 4117 ms
-2024-10-19 15:46:15 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 15:46:15 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 15:46:15 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 15:46:15 HikariPool-1 - Starting...
-2024-10-19 15:46:16 HikariPool-1 - Start completed.
-2024-10-19 15:46:16 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 15:46:17 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 15:46:17 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 15:46:18 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 15:46:19 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 15:46:19 26 mappings in 'requestMappingHandlerMapping'
-2024-10-19 15:46:20 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 15:46:20 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 15:46:21 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 15:46:21 Starting ProtocolHandler ["http-nio-auto-1"]
-2024-10-19 15:46:21 Tomcat started on port(s): 9598 (http) with context path ''
-2024-10-19 15:46:21 Started AuthorControllerTest in 12.121 seconds (JVM running for 14.042)
-2024-10-19 15:46:21 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 15:46:21 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 15:46:21 ====> Method Name Is >> {}  List com.spring.repo.BookRepository.findAll()
-2024-10-19 15:46:21 Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@17931cc0] to prepare test instance [com.spring.controller.AuthorControllerTest@7a9e44ff]
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.spring.controller.AuthorControllerTest': Unsatisfied dependency expressed through field 'mockMvc'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.test.web.servlet.MockMvc' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:417) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119) ~[spring-test-5.3.25.jar:5.3.25]
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.3.25.jar:5.3.25]
-	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.7.8.jar:2.7.8]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248) ~[spring-test-5.3.25.jar:5.3.25]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-5.3.25.jar:5.3.25]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193) ~[?:1.8.0_202]
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[?:1.8.0_202]
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382) ~[?:1.8.0_202]
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[?:1.8.0_202]
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[?:1.8.0_202]
-	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312) ~[?:1.8.0_202]
-	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743) ~[?:1.8.0_202]
-	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742) ~[?:1.8.0_202]
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580) ~[?:1.8.0_202]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at java.util.Optional.orElseGet(Optional.java:267) ~[?:1.8.0_202]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[?:1.8.0_202]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[?:1.8.0_202]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) ~[junit5-rt.jar:?]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:?]
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:?]
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:?]
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232) ~[junit-rt.jar:?]
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:?]
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.test.web.servlet.MockMvc' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1801) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1357) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.25.jar:5.3.25]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.25.jar:5.3.25]
-	... 76 more
-2024-10-19 15:46:22 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 15:46:22 HikariPool-1 - Shutdown initiated...
-2024-10-19 15:46:22 HikariPool-1 - Shutdown completed.
-2024-10-19 15:49:42 HV000001: Hibernate Validator 6.2.5.Final
-2024-10-19 15:49:42 Starting AuthorControllerTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 5204 (started by Ahmed.Elsheikh in D:\intellij\books)
-2024-10-19 15:49:42 Running with Spring Boot v2.7.8, Spring v5.3.25
-2024-10-19 15:49:42 The following 1 profile is active: "prod"
-2024-10-19 15:49:43 Multiple Spring Data modules found, entering strict repository configuration mode
-2024-10-19 15:49:43 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-19 15:49:44 Finished Spring Data repository scanning in 203 ms. Found 3 JPA repository interfaces.
-2024-10-19 15:49:46 Tomcat initialized with port(s): 0 (http)
-2024-10-19 15:49:46 Initializing ProtocolHandler ["http-nio-auto-1"]
-2024-10-19 15:49:46 Starting service [Tomcat]
-2024-10-19 15:49:46 Starting Servlet engine: [Apache Tomcat/9.0.71]
-2024-10-19 15:49:46 Initializing Spring embedded WebApplicationContext
-2024-10-19 15:49:46 Root WebApplicationContext: initialization completed in 3588 ms
-2024-10-19 15:49:47 HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-19 15:49:47 HHH000412: Hibernate ORM core version 5.6.14.Final
-2024-10-19 15:49:47 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-10-19 15:49:47 HikariPool-1 - Starting...
-2024-10-19 15:49:48 HikariPool-1 - Start completed.
-2024-10-19 15:49:48 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2024-10-19 15:49:49 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-10-19 15:49:49 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 15:49:50 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-19 15:49:50 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-10-19 15:49:51 26 mappings in 'requestMappingHandlerMapping'
-2024-10-19 15:49:52 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-10-19 15:49:52 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-10-19 15:49:53 Initializing Spring TestDispatcherServlet ''
-2024-10-19 15:49:53 Initializing Servlet ''
-2024-10-19 15:49:53 Exposing 14 endpoint(s) beneath base path '/actuator'
-2024-10-19 15:49:53 Completed initialization in 45 ms
-2024-10-19 15:49:53 Starting ProtocolHandler ["http-nio-auto-1"]
-2024-10-19 15:49:53 Tomcat started on port(s): 9673 (http) with context path ''
-2024-10-19 15:49:53 Started AuthorControllerTest in 11.025 seconds (JVM running for 12.459)
-2024-10-19 15:49:53 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
-2024-10-19 15:49:53 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
-2024-10-19 15:49:53 ====> Method Name Is >> {}  List com.spring.repo.BookRepository.findAll()
-2024-10-19 15:49:53 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 110 ms.
-2024-10-19 15:49:53 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 110 ms.
-2024-10-19 15:49:53 Mapped to com.spring.controller.AuthorController#findByEmail(String)
-2024-10-19 15:49:53 ====> Method Name Is >> {}  ResponseEntity com.spring.controller.AuthorController.findByEmail(String)
-2024-10-19 15:49:53 ====> argument >> a@a.com
-2024-10-19 15:49:53 Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json, application/cbor]
-2024-10-19 15:49:53 Writing [AuthorDTO(id=0, name=ahmed, ipAddress=192.168.1.1, email=a@a.com, bookCount=1, imagePath=null)]
-2024-10-19 15:49:54 Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-19 15:49:54 HikariPool-1 - Shutdown initiated...
-2024-10-19 15:49:54 HikariPool-1 - Shutdown completed.
+2024-10-20 12:50:52 HV000001: Hibernate Validator 6.2.5.Final
+2024-10-20 12:50:52 Starting AuthorControllerTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 93908 (started by Ahmed.Elsheikh in D:\intellij\books)
+2024-10-20 12:50:52 Running with Spring Boot v2.7.8, Spring v5.3.25
+2024-10-20 12:50:52 The following 1 profile is active: "prod"
+2024-10-20 12:50:54 Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-20 12:50:54 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-20 12:50:54 Finished Spring Data repository scanning in 227 ms. Found 3 JPA repository interfaces.
+2024-10-20 12:50:57 Tomcat initialized with port(s): 0 (http)
+2024-10-20 12:50:57 Initializing ProtocolHandler ["http-nio-auto-1"]
+2024-10-20 12:50:57 Starting service [Tomcat]
+2024-10-20 12:50:57 Starting Servlet engine: [Apache Tomcat/9.0.71]
+2024-10-20 12:50:57 Initializing Spring embedded WebApplicationContext
+2024-10-20 12:50:57 Root WebApplicationContext: initialization completed in 4533 ms
+2024-10-20 12:50:58 HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-20 12:50:58 HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-10-20 12:50:58 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-20 12:50:58 HikariPool-1 - Starting...
+2024-10-20 12:50:59 HikariPool-1 - Start completed.
+2024-10-20 12:50:59 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-10-20 12:51:00 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-20 12:51:00 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-20 12:51:01 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-20 12:51:02 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-20 12:51:02 26 mappings in 'requestMappingHandlerMapping'
+2024-10-20 12:51:03 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-10-20 12:51:03 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-20 12:51:04 Initializing Spring TestDispatcherServlet ''
+2024-10-20 12:51:04 Initializing Servlet ''
+2024-10-20 12:51:04 Exposing 14 endpoint(s) beneath base path '/actuator'
+2024-10-20 12:51:04 Completed initialization in 50 ms
+2024-10-20 12:51:04 Starting ProtocolHandler ["http-nio-auto-1"]
+2024-10-20 12:51:04 Tomcat started on port(s): 9616 (http) with context path ''
+2024-10-20 12:51:04 Started AuthorControllerTest in 12.143 seconds (JVM running for 13.652)
+2024-10-20 12:51:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:51:04 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:51:04 ====> Method Name Is >> {}  List com.spring.repo.BookRepository.findAll()
+2024-10-20 12:51:04 Mapped to com.spring.controller.AuthorController#save(AuthorDTO)
+2024-10-20 12:51:04 Read "application/json;charset=UTF-8" to []
+2024-10-20 12:51:04 Using @ExceptionHandler com.spring.exception.GlobalExceptionHandler#handleException(Exception, WebRequest)
+2024-10-20 12:51:04 Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-10-20 12:51:04 Nothing to write: null body
+2024-10-20 12:51:04 Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<?> com.spring.controller.AuthorController.save(com.spring.dto.AuthorDTO)]
+2024-10-20 12:51:05 Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-20 12:51:05 HikariPool-1 - Shutdown initiated...
+2024-10-20 12:51:05 HikariPool-1 - Shutdown completed.
+2024-10-20 12:52:16 HV000001: Hibernate Validator 6.2.5.Final
+2024-10-20 12:52:16 Starting AuthorControllerTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 71100 (started by Ahmed.Elsheikh in D:\intellij\books)
+2024-10-20 12:52:16 Running with Spring Boot v2.7.8, Spring v5.3.25
+2024-10-20 12:52:16 The following 1 profile is active: "prod"
+2024-10-20 12:52:18 Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-20 12:52:18 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-20 12:52:18 Finished Spring Data repository scanning in 178 ms. Found 3 JPA repository interfaces.
+2024-10-20 12:52:20 Tomcat initialized with port(s): 0 (http)
+2024-10-20 12:52:20 Initializing ProtocolHandler ["http-nio-auto-1"]
+2024-10-20 12:52:20 Starting service [Tomcat]
+2024-10-20 12:52:20 Starting Servlet engine: [Apache Tomcat/9.0.71]
+2024-10-20 12:52:20 Initializing Spring embedded WebApplicationContext
+2024-10-20 12:52:20 Root WebApplicationContext: initialization completed in 3993 ms
+2024-10-20 12:52:22 HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-20 12:52:22 HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-10-20 12:52:22 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-20 12:52:22 HikariPool-1 - Starting...
+2024-10-20 12:52:23 HikariPool-1 - Start completed.
+2024-10-20 12:52:23 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-10-20 12:52:23 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-20 12:52:23 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-20 12:52:25 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-20 12:52:25 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-20 12:52:25 26 mappings in 'requestMappingHandlerMapping'
+2024-10-20 12:52:26 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-10-20 12:52:26 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-20 12:52:27 Initializing Spring TestDispatcherServlet ''
+2024-10-20 12:52:27 Initializing Servlet ''
+2024-10-20 12:52:27 Exposing 14 endpoint(s) beneath base path '/actuator'
+2024-10-20 12:52:27 Completed initialization in 55 ms
+2024-10-20 12:52:28 Starting ProtocolHandler ["http-nio-auto-1"]
+2024-10-20 12:52:28 Tomcat started on port(s): 9665 (http) with context path ''
+2024-10-20 12:52:28 Started AuthorControllerTest in 11.66 seconds (JVM running for 13.543)
+2024-10-20 12:52:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:28 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:28 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 124 ms.
+2024-10-20 12:52:28 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 124 ms.
+2024-10-20 12:52:33 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:33 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:33 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:33 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:33 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9 ms.
+2024-10-20 12:52:33 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9 ms.
+2024-10-20 12:52:33 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9 ms.
+2024-10-20 12:52:33 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 11 ms.
+2024-10-20 12:52:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:36 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 12 ms.
+2024-10-20 12:52:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 16 ms.
+2024-10-20 12:52:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 17 ms.
+2024-10-20 12:52:36 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 19 ms.
+2024-10-20 12:52:45 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 8739 ms.
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 14 ms.
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 14 ms.
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 11 ms.
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 12 ms.
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 1 ms.
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-20 12:52:54 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 4 ms.
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 3 ms.
+2024-10-20 12:52:54 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-20 12:52:57 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:57 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-20 12:52:57 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-20 12:52:58 Mapped to com.spring.controller.AuthorController#save(AuthorDTO)
+2024-10-20 12:52:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:52:58 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:52:58 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-20 12:52:58 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-20 12:52:58 Read "application/json;charset=UTF-8" to [AuthorDTO(id=0, name=null, ipAddress=192.168.1.1, email=a@a.com, bookCount=1, imagePath=null)]
+2024-10-20 12:52:58 ====> Method Name Is >> {}  ResponseEntity com.spring.controller.AuthorController.save(AuthorDTO)
+2024-10-20 12:52:58 ====> argument >> AuthorDTO(id=0, name=null, ipAddress=192.168.1.1, email=a@a.com, bookCount=1, imagePath=null)
+2024-10-20 12:52:58 Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json, application/cbor]
+2024-10-20 12:52:58 Writing [AuthorDTO(id=0, name=ahmed, ipAddress=192.168.1.1, email=a@a.com, bookCount=1, imagePath=null)]
+2024-10-20 12:53:11 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:53:11 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:53:11 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:53:11 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:53:11 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 8 ms.
+2024-10-20 12:53:11 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 8 ms.
+2024-10-20 12:53:11 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:53:11 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9 ms.
+2024-10-20 12:53:11 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 9 ms.
+2024-10-20 12:53:11 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:53:11 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:53:11 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:53:11 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 9 ms.
+2024-10-20 12:53:11 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 7 ms.
+2024-10-20 12:53:11 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 7 ms.
+2024-10-20 12:53:11 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:53:11 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:53:11 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 7 ms.
+2024-10-20 12:53:11 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:53:11 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:53:11 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 6 ms.
+2024-10-20 12:53:11 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 6 ms.
+2024-10-20 12:53:11 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 5 ms.
+2024-10-20 12:53:11 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 5 ms.
+2024-10-20 12:53:13 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:53:13 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:53:13 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 6 ms.
+2024-10-20 12:53:13 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 6 ms.
+2024-10-20 12:53:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:53:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:53:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:53:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:53:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-20 12:53:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 979 ms.
+2024-10-20 12:53:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:53:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:53:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 3 ms.
+2024-10-20 12:53:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:53:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 4 ms.
+2024-10-20 12:53:20 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:53:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-20 12:53:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-20 12:53:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 2 ms.
+2024-10-20 12:53:20 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 2 ms.
+2024-10-20 12:53:21 Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-20 12:53:21 HikariPool-1 - Shutdown initiated...
+2024-10-20 12:53:21 HikariPool-1 - Shutdown completed.
+2024-10-20 12:53:35 HV000001: Hibernate Validator 6.2.5.Final
+2024-10-20 12:53:35 Starting AuthorControllerTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 16700 (started by Ahmed.Elsheikh in D:\intellij\books)
+2024-10-20 12:53:35 Running with Spring Boot v2.7.8, Spring v5.3.25
+2024-10-20 12:53:35 The following 1 profile is active: "prod"
+2024-10-20 12:53:36 Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-20 12:53:36 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-20 12:53:36 Finished Spring Data repository scanning in 172 ms. Found 3 JPA repository interfaces.
+2024-10-20 12:53:38 Tomcat initialized with port(s): 0 (http)
+2024-10-20 12:53:38 Initializing ProtocolHandler ["http-nio-auto-1"]
+2024-10-20 12:53:38 Starting service [Tomcat]
+2024-10-20 12:53:38 Starting Servlet engine: [Apache Tomcat/9.0.71]
+2024-10-20 12:53:38 Initializing Spring embedded WebApplicationContext
+2024-10-20 12:53:38 Root WebApplicationContext: initialization completed in 3311 ms
+2024-10-20 12:53:39 HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-20 12:53:39 HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-10-20 12:53:40 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-20 12:53:40 HikariPool-1 - Starting...
+2024-10-20 12:53:40 HikariPool-1 - Start completed.
+2024-10-20 12:53:40 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-10-20 12:53:41 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-20 12:53:41 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-20 12:53:42 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-20 12:53:43 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-20 12:53:43 26 mappings in 'requestMappingHandlerMapping'
+2024-10-20 12:53:43 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-10-20 12:53:44 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-20 12:53:44 Initializing Spring TestDispatcherServlet ''
+2024-10-20 12:53:44 Initializing Servlet ''
+2024-10-20 12:53:44 Exposing 14 endpoint(s) beneath base path '/actuator'
+2024-10-20 12:53:45 Completed initialization in 48 ms
+2024-10-20 12:53:45 Starting ProtocolHandler ["http-nio-auto-1"]
+2024-10-20 12:53:45 Tomcat started on port(s): 9693 (http) with context path ''
+2024-10-20 12:53:45 Started AuthorControllerTest in 10.192 seconds (JVM running for 11.555)
+2024-10-20 12:53:45 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:53:45 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:53:45 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 107 ms.
+2024-10-20 12:53:45 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 107 ms.
+2024-10-20 12:53:45 Mapped to com.spring.controller.AuthorController#save(AuthorDTO)
+2024-10-20 12:53:45 Read "application/json;charset=UTF-8" to [AuthorDTO(id=0, name=null, ipAddress=192.168.1.1, email=a@a.com, bookCount=1, imagePath=null)]
+2024-10-20 12:53:45 ====> Method Name Is >> {}  ResponseEntity com.spring.controller.AuthorController.save(AuthorDTO)
+2024-10-20 12:53:45 ====> argument >> AuthorDTO(id=0, name=null, ipAddress=192.168.1.1, email=a@a.com, bookCount=1, imagePath=null)
+2024-10-20 12:53:45 Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json, application/cbor]
+2024-10-20 12:53:45 Writing [AuthorDTO(id=0, name=ahmed, ipAddress=192.168.1.1, email=a@a.com, bookCount=1, imagePath=null)]
+2024-10-20 12:53:46 Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-20 12:53:46 HikariPool-1 - Shutdown initiated...
+2024-10-20 12:53:46 HikariPool-1 - Shutdown completed.
+2024-10-20 12:53:57 HV000001: Hibernate Validator 6.2.5.Final
+2024-10-20 12:53:58 Starting AuthorControllerTest using Java 1.8.0_202 on IT-AhmedAlsheikh with PID 11452 (started by Ahmed.Elsheikh in D:\intellij\books)
+2024-10-20 12:53:58 Running with Spring Boot v2.7.8, Spring v5.3.25
+2024-10-20 12:53:58 The following 1 profile is active: "prod"
+2024-10-20 12:53:59 Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-20 12:53:59 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-20 12:53:59 Finished Spring Data repository scanning in 205 ms. Found 3 JPA repository interfaces.
+2024-10-20 12:54:02 Tomcat initialized with port(s): 0 (http)
+2024-10-20 12:54:02 Initializing ProtocolHandler ["http-nio-auto-1"]
+2024-10-20 12:54:02 Starting service [Tomcat]
+2024-10-20 12:54:02 Starting Servlet engine: [Apache Tomcat/9.0.71]
+2024-10-20 12:54:02 Initializing Spring embedded WebApplicationContext
+2024-10-20 12:54:02 Root WebApplicationContext: initialization completed in 4318 ms
+2024-10-20 12:54:03 HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-20 12:54:03 HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-10-20 12:54:03 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-10-20 12:54:03 HikariPool-1 - Starting...
+2024-10-20 12:54:04 HikariPool-1 - Start completed.
+2024-10-20 12:54:04 HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-10-20 12:54:05 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-10-20 12:54:05 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-20 12:54:07 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-20 12:54:07 ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-20 12:54:08 26 mappings in 'requestMappingHandlerMapping'
+2024-10-20 12:54:08 Patterns [/webjars/**, /**, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-10-20 12:54:08 ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-20 12:54:10 Initializing Spring TestDispatcherServlet ''
+2024-10-20 12:54:10 Initializing Servlet ''
+2024-10-20 12:54:10 Exposing 14 endpoint(s) beneath base path '/actuator'
+2024-10-20 12:54:10 Completed initialization in 56 ms
+2024-10-20 12:54:10 Starting ProtocolHandler ["http-nio-auto-1"]
+2024-10-20 12:54:10 Tomcat started on port(s): 9722 (http) with context path ''
+2024-10-20 12:54:10 Started AuthorControllerTest in 12.85 seconds (JVM running for 14.452)
+2024-10-20 12:54:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computePrice()
+2024-10-20 12:54:10 ====> Method Name Is >> {}  void com.spring.service.PriceSchedule.computeDiscount()
+2024-10-20 12:54:10 ====> Method Name Is >> {}  List com.spring.repo.BookRepository.findAll()
+2024-10-20 12:54:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computeDiscount()	withArgs: ()	took: 122 ms.
+2024-10-20 12:54:10 KPI:[method-execution]	for: void com.spring.service.PriceSchedule.computePrice()	withArgs: ()	took: 122 ms.
+2024-10-20 12:54:10 Mapped to com.spring.controller.AuthorController#save(AuthorDTO)
+2024-10-20 12:54:10 Read "application/json;charset=UTF-8" to [AuthorDTO(id=0, name=null, ipAddress=192.168.1.1, email=a@a.com, bookCount=1, imagePath=null)]
+2024-10-20 12:54:10 ====> Method Name Is >> {}  ResponseEntity com.spring.controller.AuthorController.save(AuthorDTO)
+2024-10-20 12:54:10 ====> argument >> AuthorDTO(id=0, name=null, ipAddress=192.168.1.1, email=a@a.com, bookCount=1, imagePath=null)
+2024-10-20 12:54:10 Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json, application/cbor]
+2024-10-20 12:54:10 Writing [AuthorDTO(id=0, name=ahmed, ipAddress=192.168.1.1, email=a@a.com, bookCount=1, imagePath=null)]
+2024-10-20 12:54:11 Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-20 12:54:11 HikariPool-1 - Shutdown initiated...
+2024-10-20 12:54:11 HikariPool-1 - Shutdown completed.

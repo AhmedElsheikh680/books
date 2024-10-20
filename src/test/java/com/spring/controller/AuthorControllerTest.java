@@ -1,5 +1,6 @@
 package com.spring.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spring.entity.Author;
 import com.spring.service.AuthorService;
 import org.junit.jupiter.api.Test;
@@ -13,6 +14,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.util.Optional;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -27,6 +29,9 @@ public class AuthorControllerTest {
 
     @MockBean
     AuthorService authorService;
+
+    @Autowired
+    ObjectMapper objectMapper;
 
 //    @Test
 //    void findByEmailNotFoundTest() {
@@ -47,6 +52,15 @@ public class AuthorControllerTest {
                 .contentType("application/json"))
 //                .param("SendMelcomeMail", true)
 //                .content(objectMapper.writeValueAsString(author)))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    void addAuthorTest () throws Exception {
+        Mockito.when(authorService.save(Mockito.any(Author.class))).thenReturn(new Author("ahmed", "192.168.1.1", "a@a.com", 1, null));
+        mockMvc.perform(post("/author")
+                .contentType("application/json")
+                        .content(objectMapper.writeValueAsString(new Author("ahmed", "192.168.1.1", "a@a.com", 1, null))))
                 .andExpect(status().isOk());
     }
 }
