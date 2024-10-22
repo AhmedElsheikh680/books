@@ -27,7 +27,9 @@ public class AuthorServiceTest {
 
     @Test
     void findByEmailFoundTest() {
-        Mockito.when(authorRepo.findByEmail(Mockito.anyString())).thenReturn(Optional.of(new Author("ahmed", "192.168.1.1", "a@a.com", 1, null)));
+//        Mockito.when(authorRepo.findByEmail(Mockito.anyString())).thenReturn(Optional.of(new Author("ahmed", "192.168.1.1", "a@a.com", 1, null)));
+        Mockito.when(authorService.findByEmail(Mockito.anyString())).thenReturn(Optional.empty());
+
         Optional<Author> author = authorService.findByEmail("ahmed@mohamed.com");
         Assertions.assertEquals(true, author.isPresent());
         Assertions.assertEquals("a@a.com", author.get().getEmail());

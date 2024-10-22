@@ -3,7 +3,11 @@ package com.spring.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spring.entity.Author;
 import com.spring.service.AuthorService;
+import lombok.extern.log4j.Log4j2;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -19,6 +23,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
+@Log4j2
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class AuthorControllerTest {
 
 //    @Autowired
@@ -32,6 +38,12 @@ public class AuthorControllerTest {
 
     @Autowired
     ObjectMapper objectMapper;
+
+    @BeforeAll
+    public void initMethod() {
+        log.info("Init Method>>>>>>>>>>>>>>>>>>>>>.");
+        Mockito.when(authorService.save(Mockito.any(Author.class))).thenReturn(new Author("ahmed", "192.168.1.1", "a@a.com", 1, null));
+    }
 
 //    @Test
 //    void findByEmailNotFoundTest() {
@@ -47,7 +59,6 @@ public class AuthorControllerTest {
     void findByEmailNotFoundTest () throws Exception {
        String email = "a@a.com";
         Mockito.when(authorService.findByEmail(Mockito.anyString())).thenReturn(Optional.of(new Author("ahmed", "192.168.1.1", "a@a.com", 1, null)));
-
         mockMvc.perform(get("/author/email/{email}", email)
                 .contentType("application/json"))
 //                .param("SendMelcomeMail", true)
@@ -57,10 +68,14 @@ public class AuthorControllerTest {
 
     @Test
     void addAuthorTest () throws Exception {
-        Mockito.when(authorService.save(Mockito.any(Author.class))).thenReturn(new Author("ahmed", "192.168.1.1", "a@a.com", 1, null));
         mockMvc.perform(post("/author")
                 .contentType("application/json")
                         .content(objectMapper.writeValueAsString(new Author("ahmed", "192.168.1.1", "a@a.com", 1, null))))
                 .andExpect(status().isOk());
+    }
+
+    @AfterAll
+    void destroyMethod() {
+        log.info("Destroy Method>>>>>>>>>>>>>>>>>>>>>>>");
     }
 }

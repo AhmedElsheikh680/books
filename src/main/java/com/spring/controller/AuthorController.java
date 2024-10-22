@@ -1,9 +1,9 @@
 package com.spring.controller;
 
 
+import com.spring.dto.AuthorDTO;
 import com.spring.entity.Author;
 import com.spring.entity.AuthorSearch;
-import com.spring.dto.AuthorDTO;
 import com.spring.mapper.AuthorMapper;
 import com.spring.service.AuthorService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -16,12 +16,14 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Optional;
 
 @Validated
 @RestController
@@ -70,9 +72,16 @@ public class AuthorController {
 
     @GetMapping("/email/{email}")
     public ResponseEntity<?> findByEmail(@PathVariable String email) {
-       Author author =  authorService.findByEmail(email).get();
-       AuthorDTO authorDTO = authorMapper.map(author);
-       return ResponseEntity.ok(authorDTO);
+//       Author author =  authorService.findByEmail(email).get();
+       Optional<Author> author =  authorService.findByEmail(email);
+       if (author.isPresent()) {
+
+           AuthorDTO authorDTO = authorMapper.map(author.get());
+           return ResponseEntity.ok(authorDTO);
+       } else {
+           return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                   .body("Author with email " + email + " Not found");
+       }
 
     }
 
