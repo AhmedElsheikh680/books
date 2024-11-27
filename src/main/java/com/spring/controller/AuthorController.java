@@ -14,6 +14,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -30,6 +31,8 @@ import java.util.Optional;
 @RequestMapping("/author")
 @Tag(name = "Author Controller5")
 @RequiredArgsConstructor
+@CrossOrigin(value = {"http://localhost:4200"})
+@Log4j2
 public class AuthorController {
 
 
@@ -91,6 +94,10 @@ public class AuthorController {
 
         List<Author> authors  = authorService.findAll();
         List<AuthorDTO> dtos = authorMapper.map(authors);
+        dtos.get(0).setName(authors.get(0).getFullName());
+        log.info("DTOS: "+ dtos.toString());
+        log.info("DTOS: "+ dtos.get(0).getName());
+        log.info("Updated name: "+dtos.get(0).getName());
         return ResponseEntity.ok(dtos);
     }
 

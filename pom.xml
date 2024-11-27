@@ -193,7 +193,7 @@
                     </excludes>
                 </configuration>
             </plugin>
-            <!-- annotation processors -->
+            <!-- annotation processors mapstruct-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
